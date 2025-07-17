@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Urban Quest - Interactive Urban Planning Website
 
 A modern, multi-page website that combines urban planning education with interactive gaming elements, featuring Minecraft integration, advanced chatbot, and community engagement. **Now with enhanced professional design and improved user experience!**
@@ -289,6 +288,3 @@ For questions or support:
 - **Accessibility**: WCAG guidelines and [WebAIM](https://webaim.org/) resources.
 - **Professional Design**: Enhanced with modern glassmorphism effects, improved typography, and professional color schemes.
 - **Other Attributions**: See individual files for further attributions where required. 
-=======
-# Proidwebsite
->>>>>>> 1a6adb29a2a993f3afb637cff6c04e03c2f0cc76

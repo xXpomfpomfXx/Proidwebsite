@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Stations - Urban Quest</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/advanced-features.css">
+    <link rel="stylesheet" href="../styles/minecraft-theme.css">
+    <link rel="stylesheet" href="../styles/enhanced-dark-theme.css">
+    <link rel="stylesheet" href="../styles/chatbot-dark-fix.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Enhanced Header with Progress Indicator -->
+    <header class="header minecraft-header">
+        <div class="progress-bar-top">
+            <div class="progress-fill" id="pageProgress"></div>
+        </div>
+        <nav class="nav minecraft-nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon minecraft-icon">⛏️</span>
+                    <span class="logo-text">Urban Quest</span>
+                    <div class="logo-subtitle">DMP2025</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="minecraft-nav-link">
+                        <span class="nav-text">Home</span>
+                    </a></li>
+                    <li><a href="about.html" class="minecraft-nav-link">
+                        <span class="nav-text">About</span>
+                    </a></li>
+                    <li><a href="quest-stations.html" class="minecraft-nav-link active">
+                        <span class="nav-text">Quest Stations</span>
+                    </a></li>
+                    <li><a href="minecraft.html" class="minecraft-nav-link">
+                        <span class="nav-text">Minecraft World</span>
+                    </a></li>
+                    <li><a href="partners.html" class="minecraft-nav-link">
+                        <span class="nav-text">Partners</span>
+                    </a></li>
+                    <li><a href="rewards.html" class="minecraft-nav-link">
+                        <span class="nav-text">Rewards</span>
+                    </a></li>
+                    <li><a href="contact.html" class="minecraft-nav-link">
+                        <span class="nav-text">Contact</span>
+                    </a></li>
+                </ul>
+                <div class="nav-actions">
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Enhanced Page Hero with Breadcrumbs -->
+        <section class="page-hero enhanced-page-hero" style="position:relative; background: linear-gradient(135deg, #1a2d13 0%, #3e8138 100%); overflow:hidden;">
+            <div class="hero-bg-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(30,60,30,0.45);z-index:0;"></div>
+            <div class="container" style="position:relative;z-index:1;">
+                <!-- Breadcrumb Navigation -->
+                <nav class="breadcrumb" style="font-size:0.95rem;opacity:0.7;margin-bottom:1.5rem;">
+                    <a href="../index.html" class="breadcrumb-item" style="color:#b2e5c2;">
+                        Home
+                    </a>
+                    <span class="breadcrumb-separator" style="margin:0 0.5rem;">&rsaquo;</span>
+                    <span class="breadcrumb-item active" style="color:#fff;">
+                        Quest Stations
+                    </span>
+                </nav>
+                
+                <div class="page-hero-content" style="text-align:center;">
+                    <div class="hero-badge" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(0,255,135,0.12);color:#00ff87;padding:0.5rem 1.25rem;border-radius:2rem;font-weight:600;font-size:1rem;margin-bottom:1.5rem;">
+                        <span class="badge-icon" style="font-size:1.2rem;">🎯</span>
+                        <span class="badge-text">Interactive Learning</span>
+                    </div>
+                    <h1 class="page-title" style="font-size:clamp(2.5rem,6vw,4rem);font-weight:800;line-height:1.1;margin-bottom:1rem;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,0.18);">Quest Stations</h1>
+                    <p class="page-subtitle" style="font-size:1.25rem;max-width:700px;margin:0 auto 2.5rem auto;color:#e0ffe0;opacity:0.92;">5 interactive learning stations designed to make DMP2025 relevant to YOUR life. Discover how urban planning affects your daily routine, future opportunities, and the Singapore you want to live in.</p>
+                    
+                    <!-- Interactive Journey Tracker -->
+                    <div class="journey-tracker" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);margin-top:2rem;">
+                        <div class="tracker-header" style="text-align:center;margin-bottom:2rem;">
+                            <h3 style="font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:1rem;">Your DMP2025 Learning Journey</h3>
+                            <div class="progress-summary" style="display:flex;flex-direction:column;align-items:center;gap:1rem;">
+                                <span class="progress-text" style="color:#b2e5c2;font-size:1.1rem;">Progress: <strong id="overallProgress" style="color:#00ff87;">0/5</strong> stations completed</span>
+                                <div class="progress-bar" style="width:100%;height:12px;background:rgba(255,255,255,0.1);border-radius:6px;overflow:hidden;">
+                                    <div class="progress-fill" style="width: 0%;height:100%;background:linear-gradient(90deg,#00ff87 0%,#3e8138 100%);border-radius:6px;transition:width 0.5s ease;" id="progressBar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="journey-path" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;">
+                            <div class="path-step" data-station="urban-planning" style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;flex:1;min-width:100px;">
+                                <div class="step-icon" style="font-size:2rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🏙️</div>
+                                <div class="step-label" style="font-size:0.9rem;font-weight:600;color:#fff;text-align:center;">Urban Planning</div>
+                                <div class="step-status" style="font-size:0.8rem;color:#b2e5c2;background:rgba(255,255,255,0.1);padding:0.2rem 0.5rem;border-radius:0.5rem;">locked</div>
+                            </div>
+                            <div class="path-step" data-station="active-living" style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;flex:1;min-width:100px;">
+                                <div class="step-icon" style="font-size:2rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🏃‍♀️</div>
+                                <div class="step-label" style="font-size:0.9rem;font-weight:600;color:#fff;text-align:center;">Active Living</div>
+                                <div class="step-status" style="font-size:0.8rem;color:#b2e5c2;background:rgba(255,255,255,0.1);padding:0.2rem 0.5rem;border-radius:0.5rem;">locked</div>
+                            </div>
+                            <div class="path-step" data-station="creative-arts" style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;flex:1;min-width:100px;">
+                                <div class="step-icon" style="font-size:2rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🎨</div>
+                                <div class="step-label" style="font-size:0.9rem;font-weight:600;color:#fff;text-align:center;">Creative Arts</div>
+                                <div class="step-status" style="font-size:0.8rem;color:#b2e5c2;background:rgba(255,255,255,0.1);padding:0.2rem 0.5rem;border-radius:0.5rem;">locked</div>
+                            </div>
+                            <div class="path-step" data-station="innovation-lab" style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;flex:1;min-width:100px;">
+                                <div class="step-icon" style="font-size:2rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">💡</div>
+                                <div class="step-label" style="font-size:0.9rem;font-weight:600;color:#fff;text-align:center;">Innovation Lab</div>
+                                <div class="step-status" style="font-size:0.8rem;color:#b2e5c2;background:rgba(255,255,255,0.1);padding:0.2rem 0.5rem;border-radius:0.5rem;">locked</div>
+                            </div>
+                            <div class="path-step" data-station="sustainability" style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;flex:1;min-width:100px;">
+                                <div class="step-icon" style="font-size:2rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🌱</div>
+                                <div class="step-label" style="font-size:0.9rem;font-weight:600;color:#fff;text-align:center;">Sustainability</div>
+                                <div class="step-status" style="font-size:0.8rem;color:#b2e5c2;background:rgba(255,255,255,0.1);padding:0.2rem 0.5rem;border-radius:0.5rem;">locked</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Enhanced Banner with Interactive Elements -->
+        <div class="quest-mc-banner parallax-container">
+            <img src="../images/minecraft image 3.jpg" alt="Minecraft quest" class="page-banner-image parallax-image">
+            <div class="banner-overlay">
+                <div class="banner-content">
+                    <h3 style="font-size:2rem;font-weight:700;color:#fff;margin-bottom:1rem;text-shadow:0 2px 8px rgba(0,0,0,0.3);">Start Your Quest Adventure</h3>
+                    <p style="color:#e0ffe0;font-size:1.1rem;margin-bottom:2rem;opacity:0.9;">Every station brings you closer to making an impact on DMP2025</p>
+                    <div class="banner-stats" style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;">
+                        <div class="banner-stat" style="text-align:center;background:rgba(255,255,255,0.1);padding:1rem 1.5rem;border-radius:1rem;backdrop-filter:blur(8px);">
+                            <span class="stat-number" style="display:block;font-size:2rem;font-weight:700;color:#00ff87;">5</span>
+                            <span class="stat-label" style="color:#b2e5c2;font-size:0.9rem;">Stations</span>
+                        </div>
+                        <div class="banner-stat" style="text-align:center;background:rgba(255,255,255,0.1);padding:1rem 1.5rem;border-radius:1rem;backdrop-filter:blur(8px);">
+                            <span class="stat-number" style="display:block;font-size:2rem;font-weight:700;color:#00ff87;">30-60</span>
+                            <span class="stat-label" style="color:#b2e5c2;font-size:0.9rem;">Minutes Each</span>
+                        </div>
+                        <div class="banner-stat" style="text-align:center;background:rgba(255,255,255,0.1);padding:1rem 1.5rem;border-radius:1rem;backdrop-filter:blur(8px);">
+                            <span class="stat-number" style="display:block;font-size:2rem;font-weight:700;color:#00ff87;">∞</span>
+                            <span class="stat-label" style="color:#b2e5c2;font-size:0.9rem;">Impact</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Station Selection Interface -->
+        <section class="station-selector minecraft-section" style="background:linear-gradient(135deg,#1a2d13 0%,#233c22 100%);padding:4rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align:center;margin-bottom:3rem;">
+                    <span class="section-badge" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.4rem 1.1rem;border-radius:2rem;font-weight:600;font-size:1rem;">Choose Your Path</span>
+                    <h2 class="section-title" style="font-size:2.2rem;font-weight:700;color:#fff;margin:1rem 0 0.5rem 0;">Interactive Learning Stations</h2>
+                    <p class="section-subtitle" style="color:#b2e5c2;max-width:600px;margin:0 auto;">Each station connects urban planning concepts to your real life. Complete all stations to unlock special rewards and make your voice heard in DMP2025!</p>
+                </div>
+
+                <!-- Filter and Sort Controls -->
+                <div class="station-controls" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+                    <div class="filter-controls" style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+                        <button class="filter-btn active" data-filter="all" style="background:rgba(0,255,135,0.15);color:#00ff87;border:1px solid rgba(0,255,135,0.3);padding:0.5rem 1rem;border-radius:1rem;font-weight:600;transition:all 0.3s ease;">
+                            <span class="filter-icon" style="margin-right:0.5rem;">🎯</span>
+                            <span class="filter-text">All Stations</span>
+                        </button>
+                        <button class="filter-btn" data-filter="beginner" style="background:rgba(255,255,255,0.1);color:#b2e5c2;border:1px solid rgba(255,255,255,0.2);padding:0.5rem 1rem;border-radius:1rem;font-weight:600;transition:all 0.3s ease;">
+                            <span class="filter-icon" style="margin-right:0.5rem;">🌟</span>
+                            <span class="filter-text">Beginner</span>
+                        </button>
+                        <button class="filter-btn" data-filter="intermediate" style="background:rgba(255,255,255,0.1);color:#b2e5c2;border:1px solid rgba(255,255,255,0.2);padding:0.5rem 1rem;border-radius:1rem;font-weight:600;transition:all 0.3s ease;">
+                            <span class="filter-icon" style="margin-right:0.5rem;">⭐</span>
+                            <span class="filter-text">Intermediate</span>
+                        </button>
+                        <button class="filter-btn" data-filter="advanced" style="background:rgba(255,255,255,0.1);color:#b2e5c2;border:1px solid rgba(255,255,255,0.2);padding:0.5rem 1rem;border-radius:1rem;font-weight:600;transition:all 0.3s ease;">
+                            <span class="filter-icon" style="margin-right:0.5rem;">🏆</span>
+                            <span class="filter-text">Advanced</span>
+                        </button>
+                    </div>
+                    
+                    <div class="sort-controls">
+                        <select class="sort-select" id="sortStations" style="background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.2);padding:0.5rem 1rem;border-radius:1rem;font-weight:600;">
+                            <option value="recommended">Recommended Order</option>
+                            <option value="duration">Duration (Short to Long)</option>
+                            <option value="difficulty">Difficulty (Easy to Hard)</option>
+                            <option value="popularity">Most Popular</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Stations Grid -->
+                <div class="stations-grid enhanced-stations" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;">
+                    <div class="station-card interactive-element minecraft-card enhanced-station" data-station="urban-planning" data-difficulty="beginner" data-duration="30-45" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="station-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+                            <div class="station-icon minecraft-icon" style="font-size:3rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🏙️</div>
+                            <div class="station-badge difficulty-beginner" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">Beginner</div>
+                        </div>
+                        <div class="station-content">
+                            <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;">Urban Planning Hub</h3>
+                            <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Discover how DMP2025 affects YOUR daily life - from your commute to where you hang out with friends. Learn about sustainable city development through interactive technology demonstrations.</p>
+                            
+                            <div class="station-features" style="margin-bottom:1.5rem;">
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">🎯</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Learn how planning affects your daily routine</span>
+                                </div>
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">🚇</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Explore transportation and accessibility</span>
+                                </div>
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">🏠</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Understand housing and community spaces</span>
+                                </div>
+                            </div>
+                            
+                            <div class="station-details" style="background:rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;margin-bottom:1.5rem;">
+                                <div class="detail-row" style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">⏱️</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Duration:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">30-45 minutes</span>
+                                    </div>
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">👥</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Participants:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">1-6 people</span>
+                                    </div>
+                                </div>
+                                <div class="detail-row" style="display:flex;justify-content:space-between;">
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">🏆</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Rewards:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">Planning Badge</span>
+                                    </div>
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">📍</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Prerequisites:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">None</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="station-actions" style="display:flex;gap:1rem;margin-bottom:1rem;">
+                            <button class="btn btn-primary station-btn btn-minecraft" style="background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:none;transition:all 0.3s ease;flex:1;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+                                <span class="btn-icon" style="font-size:1.1rem;">🚀</span>
+                                <span class="btn-text">Start Station</span>
+                            </button>
+                            <button class="btn btn-outline station-info-btn" style="background:rgba(255,255,255,0.1);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+                                <span class="btn-icon" style="font-size:1.1rem;">ℹ️</span>
+                                <span class="btn-text">Learn More</span>
+                            </button>
+                        </div>
+                        
+                        <div class="station-progress">
+                            <div class="progress-indicator" style="display:flex;align-items:center;gap:1rem;">
+                                <span class="progress-status" style="color:#00ff87;font-size:0.9rem;font-weight:600;">Ready to Start</span>
+                                <div class="progress-bar-mini" style="flex:1;height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;">
+                                    <div class="progress-fill-mini" style="width: 0%;height:100%;background:linear-gradient(90deg,#00ff87 0%,#3e8138 100%);border-radius:3px;transition:width 0.5s ease;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="station-card interactive-element minecraft-card enhanced-station" data-station="active-living" data-difficulty="beginner" data-duration="20-30" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="station-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+                            <div class="station-icon minecraft-icon" style="font-size:3rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🏃‍♀️</div>
+                            <div class="station-badge difficulty-beginner" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">All Levels</div>
+                        </div>
+                        <div class="station-content">
+                            <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;">Active Living Station</h3>
+                            <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Experience how sports and physical activities contribute to YOUR health and happiness. Learn how DMP2025 will create more spaces for you to stay active and healthy.</p>
+                            
+                            <div class="station-features" style="margin-bottom:1.5rem;">
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">🏃‍♂️</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Design your ideal fitness spaces</span>
+                                </div>
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">⚽</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Plan community sports facilities</span>
+                                </div>
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">🌳</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Create active parks and pathways</span>
+                                </div>
+                            </div>
+                            
+                            <div class="station-details" style="background:rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;margin-bottom:1.5rem;">
+                                <div class="detail-row" style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">⏱️</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Duration:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">20-30 minutes</span>
+                                    </div>
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">👥</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Participants:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">1-8 people</span>
+                                    </div>
+                                </div>
+                                <div class="detail-row" style="display:flex;justify-content:space-between;">
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">🏆</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Rewards:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">ActiveSG Credits</span>
+                                    </div>
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">📍</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Prerequisites:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">None</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="station-actions" style="display:flex;gap:1rem;margin-bottom:1rem;">
+                            <button class="btn btn-primary station-btn btn-minecraft" style="background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:none;transition:all 0.3s ease;flex:1;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+                                <span class="btn-icon" style="font-size:1.1rem;">🚀</span>
+                                <span class="btn-text">Start Station</span>
+                            </button>
+                            <button class="btn btn-outline station-info-btn" style="background:rgba(255,255,255,0.1);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+                                <span class="btn-icon" style="font-size:1.1rem;">ℹ️</span>
+                                <span class="btn-text">Learn More</span>
+                            </button>
+                        </div>
+                        
+                        <div class="station-progress">
+                            <div class="progress-indicator" style="display:flex;align-items:center;gap:1rem;">
+                                <span class="progress-status" style="color:#00ff87;font-size:0.9rem;font-weight:600;">Ready to Start</span>
+                                <div class="progress-bar-mini" style="flex:1;height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;">
+                                    <div class="progress-fill-mini" style="width: 0%;height:100%;background:linear-gradient(90deg,#00ff87 0%,#3e8138 100%);border-radius:3px;transition:width 0.5s ease;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="station-card interactive-element minecraft-card enhanced-station" data-station="creative-arts" data-difficulty="intermediate" data-duration="25-40" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="station-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+                            <div class="station-icon minecraft-icon" style="font-size:3rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🎨</div>
+                            <div class="station-badge difficulty-intermediate" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">Creative</div>
+                        </div>
+                        <div class="station-content">
+                            <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;">Creative Arts Corner</h3>
+                            <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Express YOUR vision for the perfect Singapore through artistic activities. Show us what a happy, healthy city looks like to YOU and contribute to DMP2025 planning.</p>
+                            
+                            <div class="station-features" style="margin-bottom:1.5rem;">
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">🎭</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Create visual concepts for your ideal city</span>
+                                </div>
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">🖼️</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Design public art installations</span>
+                                </div>
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">📱</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Use digital tools for urban design</span>
+                                </div>
+                            </div>
+                            
+                            <div class="station-details" style="background:rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;margin-bottom:1.5rem;">
+                                <div class="detail-row" style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">⏱️</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Duration:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">25-40 minutes</span>
+                                    </div>
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">👥</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Participants:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">1-6 people</span>
+                                    </div>
+                                </div>
+                                <div class="detail-row" style="display:flex;justify-content:space-between;">
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">🏆</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Rewards:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">Art Gallery Display</span>
+                                    </div>
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">📍</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Prerequisites:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">Urban Planning Hub</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="station-actions" style="display:flex;gap:1rem;margin-bottom:1rem;">
+                            <button class="btn btn-secondary station-btn btn-minecraft disabled" style="background:rgba(255,255,255,0.1);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;flex:1;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+                                <span class="btn-icon" style="font-size:1.1rem;">🔒</span>
+                                <span class="btn-text">Complete Prerequisites</span>
+                            </button>
+                            <button class="btn btn-outline station-info-btn" style="background:rgba(255,255,255,0.1);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+                                <span class="btn-icon" style="font-size:1.1rem;">ℹ️</span>
+                                <span class="btn-text">Learn More</span>
+                            </button>
+                        </div>
+                        
+                        <div class="station-progress">
+                            <div class="progress-indicator" style="display:flex;align-items:center;gap:1rem;">
+                                <span class="progress-status" style="color:#00ff87;font-size:0.9rem;font-weight:600;">Locked</span>
+                                <div class="progress-bar-mini" style="flex:1;height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;">
+                                    <div class="progress-fill-mini" style="width: 0%;height:100%;background:linear-gradient(90deg,#00ff87 0%,#3e8138 100%);border-radius:3px;transition:width 0.5s ease;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="station-card interactive-element minecraft-card enhanced-station" data-station="innovation-lab" data-difficulty="advanced" data-duration="40-60" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="station-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+                            <div class="station-icon minecraft-icon" style="font-size:3rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">💡</div>
+                            <div class="station-badge difficulty-advanced" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">Advanced</div>
+                        </div>
+                        <div class="station-content">
+                            <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;">Innovation Lab</h3>
+                            <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Explore cutting-edge technology solutions for urban problems that affect YOUR future. Prototype YOUR own smart city innovations for DMP2025.</p>
+                            
+                            <div class="station-features" style="margin-bottom:1.5rem;">
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">🤖</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Prototype smart city solutions</span>
+                                </div>
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">💻</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Learn about IoT and urban technology</span>
+                                </div>
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">🚀</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Present your innovations</span>
+                                </div>
+                            </div>
+                            
+                            <div class="station-details" style="background:rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;margin-bottom:1.5rem;">
+                                <div class="detail-row" style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">⏱️</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Duration:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">40-60 minutes</span>
+                                    </div>
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">👥</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Participants:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">2-6 people</span>
+                                    </div>
+                                </div>
+                                <div class="detail-row" style="display:flex;justify-content:space-between;">
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">🏆</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Rewards:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">Innovation Certificate</span>
+                                    </div>
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">📍</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Prerequisites:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">2 Stations Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="station-actions" style="display:flex;gap:1rem;margin-bottom:1rem;">
+                            <button class="btn btn-secondary station-btn btn-minecraft disabled" style="background:rgba(255,255,255,0.1);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;flex:1;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+                                <span class="btn-icon" style="font-size:1.1rem;">🔒</span>
+                                <span class="btn-text">Complete Prerequisites</span>
+                            </button>
+                            <button class="btn btn-outline station-info-btn" style="background:rgba(255,255,255,0.1);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+                                <span class="btn-icon" style="font-size:1.1rem;">ℹ️</span>
+                                <span class="btn-text">Learn More</span>
+                            </button>
+                        </div>
+                        
+                        <div class="station-progress">
+                            <div class="progress-indicator" style="display:flex;align-items:center;gap:1rem;">
+                                <span class="progress-status" style="color:#00ff87;font-size:0.9rem;font-weight:600;">Locked</span>
+                                <div class="progress-bar-mini" style="flex:1;height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;">
+                                    <div class="progress-fill-mini" style="width: 0%;height:100%;background:linear-gradient(90deg,#00ff87 0%,#3e8138 100%);border-radius:3px;transition:width 0.5s ease;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="station-card interactive-element minecraft-card enhanced-station" data-station="sustainability" data-difficulty="intermediate" data-duration="35-50" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="station-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+                            <div class="station-icon minecraft-icon" style="font-size:3rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🌱</div>
+                            <div class="station-badge difficulty-intermediate" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">Intermediate</div>
+                        </div>
+                        <div class="station-content">
+                            <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;">Sustainability Center</h3>
+                            <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Learn about environmental challenges that will affect YOUR future and discover how green initiatives in DMP2025 can create the Singapore you want to live in.</p>
+                            
+                            <div class="station-features" style="margin-bottom:1.5rem;">
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">♻️</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Design sustainable neighborhoods</span>
+                                </div>
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">🌿</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Plan green spaces and biodiversity</span>
+                                </div>
+                                <div class="feature-highlight" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                    <span class="highlight-icon" style="color:#00ff87;font-size:1.1rem;">⚡</span>
+                                    <span class="highlight-text" style="color:#b2e5c2;font-size:0.95rem;">Explore renewable energy solutions</span>
+                                </div>
+                            </div>
+                            
+                            <div class="station-details" style="background:rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;margin-bottom:1.5rem;">
+                                <div class="detail-row" style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">⏱️</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Duration:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">35-50 minutes</span>
+                                    </div>
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">👥</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Participants:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">1-8 people</span>
+                                    </div>
+                                </div>
+                                <div class="detail-row" style="display:flex;justify-content:space-between;">
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">🏆</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Rewards:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">Green Champion Badge</span>
+                                    </div>
+                                    <div class="detail-item" style="display:flex;align-items:center;gap:0.5rem;">
+                                        <span class="detail-icon" style="color:#00ff87;">📍</span>
+                                        <span class="detail-label" style="color:#b2e5c2;font-size:0.9rem;">Prerequisites:</span>
+                                        <span class="detail-value" style="color:#fff;font-weight:600;font-size:0.9rem;">Active Living Station</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="station-actions" style="display:flex;gap:1rem;margin-bottom:1rem;">
+                            <button class="btn btn-secondary station-btn btn-minecraft disabled" style="background:rgba(255,255,255,0.1);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;flex:1;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+                                <span class="btn-icon" style="font-size:1.1rem;">🔒</span>
+                                <span class="btn-text">Complete Prerequisites</span>
+                            </button>
+                            <button class="btn btn-outline station-info-btn" style="background:rgba(255,255,255,0.1);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+                                <span class="btn-icon" style="font-size:1.1rem;">ℹ️</span>
+                                <span class="btn-text">Learn More</span>
+                            </button>
+                        </div>
+                        
+                        <div class="station-progress">
+                            <div class="progress-indicator" style="display:flex;align-items:center;gap:1rem;">
+                                <span class="progress-status" style="color:#00ff87;font-size:0.9rem;font-weight:600;">Locked</span>
+                                <div class="progress-bar-mini" style="flex:1;height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;">
+                                    <div class="progress-fill-mini" style="width: 0%;height:100%;background:linear-gradient(90deg,#00ff87 0%,#3e8138 100%);border-radius:3px;transition:width 0.5s ease;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Modal for Station Details -->
+        <section class="station-details-modal enhanced-modal" id="stationModal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-container">
+            <div class="modal-content">
+                <div class="modal-header">
+                        <div class="modal-title-section">
+                            <div class="modal-icon" id="modalIcon">🏙️</div>
+                            <div class="modal-title-text">
+                    <h2 id="modalTitle">Station Details</h2>
+                                <p id="modalSubtitle">Learn more about this station</p>
+                            </div>
+                        </div>
+                        <button class="modal-close">
+                            <span class="close-icon">×</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <div id="modalContent">
+                        <!-- Content will be loaded dynamically -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline" id="modalSecondary">Learn More</button>
+                        <button class="btn btn-primary" id="modalPrimary">Start Station</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Progress Tracking Section -->
+        <section class="quest-progression enhanced-progression minecraft-section" style="background:linear-gradient(135deg,#1a2d13 0%,#233c22 100%);padding:4rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align:center;margin-bottom:3rem;">
+                    <span class="section-badge" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.4rem 1.1rem;border-radius:2rem;font-weight:600;font-size:1rem;">Your Journey</span>
+                    <h2 class="section-title" style="font-size:2.2rem;font-weight:700;color:#fff;margin:1rem 0 0.5rem 0;">Quest Progress Dashboard</h2>
+                    <p class="section-subtitle" style="color:#b2e5c2;max-width:600px;margin:0 auto;">Track your progress through the DMP2025 learning journey and see how close you are to making a real impact</p>
+                </div>
+                
+                <div class="progress-dashboard" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+                    <!-- Overall Progress -->
+                    <div class="progress-overview minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);">
+                        <div class="overview-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+                            <h3 style="font-size:1.3rem;font-weight:700;color:#fff;">Overall Progress</h3>
+                            <div class="progress-percentage-large" id="overallPercentage" style="font-size:2rem;font-weight:700;color:#00ff87;">0%</div>
+                        </div>
+                        <div class="progress-tracker enhanced-tracker">
+                            <div class="progress-bar-large" style="width:100%;height:16px;background:rgba(255,255,255,0.1);border-radius:8px;overflow:hidden;position:relative;margin-bottom:1rem;">
+                                <div class="progress-fill-large" style="width: 0%;height:100%;background:linear-gradient(90deg,#00ff87 0%,#3e8138 100%);border-radius:8px;transition:width 0.5s ease;" id="progressBarLarge"></div>
+                                <div class="progress-steps-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;justify-content:space-between;align-items:center;padding:0 0.5rem;">
+                                    <div class="step-marker" data-step="1" style="width:20px;height:20px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.8rem;font-weight:600;">1</div>
+                                    <div class="step-marker" data-step="2" style="width:20px;height:20px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.8rem;font-weight:600;">2</div>
+                                    <div class="step-marker" data-step="3" style="width:20px;height:20px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.8rem;font-weight:600;">3</div>
+                                    <div class="step-marker" data-step="4" style="width:20px;height:20px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.8rem;font-weight:600;">4</div>
+                                    <div class="step-marker" data-step="5" style="width:20px;height:20px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.8rem;font-weight:600;">5</div>
+                                </div>
+                            </div>
+                            <div class="progress-stats" style="display:flex;justify-content:space-between;">
+                                <div class="stat-item" style="text-align:center;">
+                                    <span class="stat-number" id="completedStations" style="display:block;font-size:1.5rem;font-weight:700;color:#00ff87;">0</span>
+                                    <span class="stat-label" style="color:#b2e5c2;font-size:0.9rem;">Completed</span>
+                                </div>
+                                <div class="stat-item" style="text-align:center;">
+                                    <span class="stat-number" id="remainingStations" style="display:block;font-size:1.5rem;font-weight:700;color:#00ff87;">5</span>
+                                    <span class="stat-label" style="color:#b2e5c2;font-size:0.9rem;">Remaining</span>
+                                </div>
+                                <div class="stat-item" style="text-align:center;">
+                                    <span class="stat-number" id="estimatedTime" style="display:block;font-size:1.5rem;font-weight:700;color:#00ff87;">2.5-4</span>
+                                    <span class="stat-label" style="color:#b2e5c2;font-size:0.9rem;">Hours Total</span>
+                                </div>
+                    </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Achievement Showcase -->
+                    <div class="achievement-showcase" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);">
+                        <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1.5rem;">Achievements Unlocked</h3>
+                        <div class="achievement-grid enhanced-achievements" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+                            <div class="achievement locked" data-achievement="urban-planning" style="background:rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;display:flex;align-items:center;gap:1rem;border:1px solid rgba(255,255,255,0.1);">
+                                <div class="achievement-icon" style="font-size:2rem;color:#00ff87;">🏙️</div>
+                                <div class="achievement-info" style="flex:1;">
+                                    <h4 style="font-size:1rem;font-weight:600;color:#fff;margin-bottom:0.25rem;">Urban Planner</h4>
+                                    <p style="color:#b2e5c2;font-size:0.85rem;">Complete the Urban Planning Hub</p>
+                                </div>
+                                <div class="achievement-status" style="color:#b2e5c2;font-size:1.2rem;">🔒</div>
+                            </div>
+                            
+                            <div class="achievement locked" data-achievement="active-citizen" style="background:rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;display:flex;align-items:center;gap:1rem;border:1px solid rgba(255,255,255,0.1);">
+                                <div class="achievement-icon" style="font-size:2rem;color:#00ff87;">🏃‍♀️</div>
+                                <div class="achievement-info" style="flex:1;">
+                                    <h4 style="font-size:1rem;font-weight:600;color:#fff;margin-bottom:0.25rem;">Active Citizen</h4>
+                                    <p style="color:#b2e5c2;font-size:0.85rem;">Complete the Active Living Station</p>
+                        </div>
+                                <div class="achievement-status" style="color:#b2e5c2;font-size:1.2rem;">🔒</div>
+                    </div>
+                            
+                            <div class="achievement locked" data-achievement="creative-designer" style="background:rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;display:flex;align-items:center;gap:1rem;border:1px solid rgba(255,255,255,0.1);">
+                                <div class="achievement-icon" style="font-size:2rem;color:#00ff87;">🎨</div>
+                                <div class="achievement-info" style="flex:1;">
+                                    <h4 style="font-size:1rem;font-weight:600;color:#fff;margin-bottom:0.25rem;">Creative Designer</h4>
+                                    <p style="color:#b2e5c2;font-size:0.85rem;">Complete the Creative Arts Corner</p>
+                        </div>
+                                <div class="achievement-status" style="color:#b2e5c2;font-size:1.2rem;">🔒</div>
+                    </div>
+                            
+                            <div class="achievement locked" data-achievement="innovation-pioneer" style="background:rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;display:flex;align-items:center;gap:1rem;border:1px solid rgba(255,255,255,0.1);">
+                                <div class="achievement-icon" style="font-size:2rem;color:#00ff87;">💡</div>
+                                <div class="achievement-info" style="flex:1;">
+                                    <h4 style="font-size:1rem;font-weight:600;color:#fff;margin-bottom:0.25rem;">Innovation Pioneer</h4>
+                                    <p style="color:#b2e5c2;font-size:0.85rem;">Complete the Innovation Lab</p>
+                        </div>
+                                <div class="achievement-status" style="color:#b2e5c2;font-size:1.2rem;">🔒</div>
+                    </div>
+                            
+                            <div class="achievement locked" data-achievement="green-champion" style="background:rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;display:flex;align-items:center;gap:1rem;border:1px solid rgba(255,255,255,0.1);">
+                                <div class="achievement-icon" style="font-size:2rem;color:#00ff87;">🌱</div>
+                                <div class="achievement-info" style="flex:1;">
+                                    <h4 style="font-size:1rem;font-weight:600;color:#fff;margin-bottom:0.25rem;">Green Champion</h4>
+                                    <p style="color:#b2e5c2;font-size:0.85rem;">Complete the Sustainability Center</p>
+                </div>
+                                <div class="achievement-status" style="color:#b2e5c2;font-size:1.2rem;">🔒</div>
+            </div>
+                            
+                            <div class="achievement locked special" data-achievement="dmp2025-champion" style="background:linear-gradient(135deg,rgba(0,255,135,0.1) 0%,rgba(0,255,135,0.05) 100%);border-radius:1rem;padding:1rem;display:flex;align-items:center;gap:1rem;border:1px solid rgba(0,255,135,0.2);">
+                                <div class="achievement-icon" style="font-size:2rem;color:#00ff87;">🏆</div>
+                                <div class="achievement-info" style="flex:1;">
+                                    <h4 style="font-size:1rem;font-weight:600;color:#fff;margin-bottom:0.25rem;">DMP2025 Champion</h4>
+                                    <p style="color:#b2e5c2;font-size:0.85rem;">Complete all 5 stations</p>
+                    </div>
+                                <div class="achievement-status" style="color:#b2e5c2;font-size:1.2rem;">🔒</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced CTA Section -->
+        <section class="cta-section minecraft-section enhanced-cta" style="background:linear-gradient(135deg,#1a2d13 0%,#233c22 100%);padding:4rem 0;position:relative;overflow:hidden;">
+            <div class="cta-particles" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.1;"></div>
+            <div class="container" style="position:relative;z-index:1;">
+                <div class="cta-content" style="text-align:center;">
+                    <div class="cta-icon floating" style="font-size:4rem;color:#00ff87;margin-bottom:1.5rem;filter:drop-shadow(0 4px 16px rgba(0,255,135,0.3));">🎯</div>
+                    <h2 style="font-size:2.5rem;font-weight:700;color:#fff;margin-bottom:1rem;">Ready to Start Your DMP2025 Journey?</h2>
+                    <p style="color:#e0ffe0;font-size:1.1rem;max-width:600px;margin:0 auto 2.5rem auto;">Begin with any station and work your way through all five to become a certified DMP2025 Youth Voice. Your ideas will directly influence Singapore's future!</p>
+                    
+                    <div class="cta-options" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-bottom:2.5rem;">
+                        <div class="cta-option" data-option="start" style="background:rgba(255,255,255,0.1);border-radius:1rem;padding:1.5rem;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;">
+                            <div class="option-icon" style="font-size:2rem;color:#00ff87;margin-bottom:1rem;">🚀</div>
+                            <h4 style="font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:0.5rem;">Start Your First Station</h4>
+                            <p style="color:#b2e5c2;font-size:0.9rem;">Begin with Urban Planning Hub</p>
+                        </div>
+                        <div class="cta-option" data-option="minecraft" style="background:rgba(255,255,255,0.1);border-radius:1rem;padding:1.5rem;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;">
+                            <div class="option-icon" style="font-size:2rem;color:#00ff87;margin-bottom:1rem;">⛏️</div>
+                            <h4 style="font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:0.5rem;">Visit Minecraft World</h4>
+                            <p style="color:#b2e5c2;font-size:0.9rem;">See your ideas come to life</p>
+                        </div>
+                        <div class="cta-option" data-option="rewards" style="background:rgba(255,255,255,0.1);border-radius:1rem;padding:1.5rem;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;">
+                            <div class="option-icon" style="font-size:2rem;color:#00ff87;margin-bottom:1rem;">🏆</div>
+                            <h4 style="font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:0.5rem;">View Rewards</h4>
+                            <p style="color:#b2e5c2;font-size:0.9rem;">See what you can earn</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons" style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+                        <button class="btn btn-primary btn-large" id="startFirstStation" style="background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;padding:1rem 2rem;border-radius:1rem;font-weight:600;border:none;transition:all 0.3s ease;display:flex;align-items:center;gap:0.5rem;font-size:1.1rem;">
+                            <span class="btn-icon" style="font-size:1.2rem;">🚀</span>
+                            <span class="btn-text">Start Your Journey</span>
+                            <span class="btn-glow" style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(45deg,transparent,rgba(255,255,255,0.2),transparent);transform:translateX(-100%);transition:transform 0.6s;"></span>
+                        </button>
+                        <a href="minecraft.html" class="btn btn-secondary btn-large" style="background:rgba(255,255,255,0.1);color:#fff;padding:1rem 2rem;border-radius:1rem;font-weight:600;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;display:flex;align-items:center;gap:0.5rem;font-size:1.1rem;text-decoration:none;">
+                            <span class="btn-icon" style="font-size:1.2rem;">⛏️</span>
+                            <span class="btn-text">Explore Minecraft World</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer minecraft-footer enhanced-footer" style="background:linear-gradient(135deg,#1a2d13 0%,#233c22 100%);padding:3rem 0 1rem 0;">
+        <div class="container">
+            <div class="footer-content" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem;">
+                <div class="footer-section">
+                    <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;">Urban Quest</h3>
+                    <p style="color:#b2e5c2;line-height:1.6;margin-bottom:1.5rem;">Building better cities through interactive learning and community engagement.</p>
+                    <div class="social-links" style="display:flex;gap:1rem;">
+                        <a href="#" class="social-link" style="display:flex;align-items:center;gap:0.5rem;color:#b2e5c2;text-decoration:none;padding:0.5rem 1rem;background:rgba(255,255,255,0.1);border-radius:0.5rem;transition:all 0.3s ease;">
+                            <span class="social-icon" style="font-size:1.1rem;">📘</span>
+                            <span class="social-label" style="font-size:0.9rem;">Facebook</span>
+                        </a>
+                        <a href="#" class="social-link" style="display:flex;align-items:center;gap:0.5rem;color:#b2e5c2;text-decoration:none;padding:0.5rem 1rem;background:rgba(255,255,255,0.1);border-radius:0.5rem;transition:all 0.3s ease;">
+                            <span class="social-icon" style="font-size:1.1rem;">📷</span>
+                            <span class="social-label" style="font-size:0.9rem;">Instagram</span>
+                        </a>
+                        <a href="#" class="social-link" style="display:flex;align-items:center;gap:0.5rem;color:#b2e5c2;text-decoration:none;padding:0.5rem 1rem;background:rgba(255,255,255,0.1);border-radius:0.5rem;transition:all 0.3s ease;">
+                            <span class="social-icon" style="font-size:1.1rem;">🐦</span>
+                            <span class="social-label" style="font-size:0.9rem;">Twitter</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 style="font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:1rem;">Quick Links</h4>
+                    <ul style="list-style:none;padding:0;">
+                        <li style="margin-bottom:0.5rem;"><a href="about.html" style="color:#b2e5c2;text-decoration:none;transition:color 0.3s ease;">About Us</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="quest-stations.html" style="color:#b2e5c2;text-decoration:none;transition:color 0.3s ease;">Quest Stations</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="minecraft.html" style="color:#b2e5c2;text-decoration:none;transition:color 0.3s ease;">Minecraft World</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="rewards.html" style="color:#b2e5c2;text-decoration:none;transition:color 0.3s ease;">Rewards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 style="font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:1rem;">Partners</h4>
+                    <ul style="list-style:none;padding:0;">
+                        <li style="color:#b2e5c2;margin-bottom:0.5rem;">URA</li>
+                        <li style="color:#b2e5c2;margin-bottom:0.5rem;">ActiveSG</li>
+                        <li style="color:#b2e5c2;margin-bottom:0.5rem;">People's Association</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 style="font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:1rem;">Contact</h4>
+                    <p style="color:#b2e5c2;margin-bottom:0.5rem;">📧 info@urbanquest.sg</p>
+                    <p style="color:#b2e5c2;margin-bottom:0.5rem;">📞 +65 1234 5678</p>
+                    <p style="color:#b2e5c2;margin-bottom:0.5rem;">📍 Singapore</p>
+                </div>
+            </div>
+            <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+                <p style="color:#b2e5c2;margin:0;">&copy; 2024 Urban Quest. All rights reserved.</p>
+                <div class="footer-links" style="display:flex;gap:1.5rem;">
+                    <a href="#" style="color:#b2e5c2;text-decoration:none;font-size:0.9rem;transition:color 0.3s ease;">Privacy Policy</a>
+                    <a href="#" style="color:#b2e5c2;text-decoration:none;font-size:0.9rem;transition:color 0.3s ease;">Terms of Service</a>
+                    <a href="#" style="color:#b2e5c2;text-decoration:none;font-size:0.9rem;transition:color 0.3s ease;">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/quest-stations.js"></script>
+    <script src="../scripts/advanced-chatbot.js"></script>
+</body>
+</html> 
+</html> 

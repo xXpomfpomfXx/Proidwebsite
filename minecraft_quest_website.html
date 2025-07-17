@@ -1,0 +1,712 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Urban Quest - Build Your Future City</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #3e8138 0%, #7ac142 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d7fdd3;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-2px);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #a4e100;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #balatro-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 800px;
+            padding: 2rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #8ebf42, #3e8138);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #f0f0f0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #8ebf42, #3e8138);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(126, 200, 42, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(126, 200, 42, 0.4);
+        }
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Partners Section */
+.partners {
+    background: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.partners h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.partner-logo {
+    width: 120px;
+    height: 80px;
+    background: linear-gradient(135deg, #8ebf42, #3e8138);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.partner-logo:hover {
+    transform: scale(1.1) rotateY(10deg);
+    box-shadow: 0 15px 30px rgba(126, 200, 42, 0.3);
+}
+
+/* Quest Stations */
+.quest-stations {
+    background: linear-gradient(135deg, #1e5422, #2a7a38);
+    padding: 5rem 0;
+    color: white;
+}
+
+.quest-stations h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    background: linear-gradient(45deg, #a4e100, #8ebf42);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.station-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.station-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(164, 225, 0, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.station-card:hover::before {
+    animation: shimmer 2s infinite;
+    opacity: 1;
+}
+
+.station-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(126, 200, 42, 0.2);
+}
+
+.station-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.station-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #a4e100;
+}
+
+.station-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Minecraft Integration */
+.minecraft-section {
+    background: #2d5016;
+    padding: 5rem 0;
+    color: white;
+    position: relative;
+}
+
+.minecraft-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(0,0,0,0.1) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.1) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.1) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.minecraft-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.minecraft-content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: 'Courier New', monospace;
+    text-shadow: 3px 3px 0px #1a3009;
+}
+
+.minecraft-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.minecraft-feature {
+    background: rgba(139, 69, 19, 0.8);
+    border: 3px solid #8B4513;
+    border-radius: 10px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.minecraft-feature:hover {
+    transform: scale(1.05);
+    background: rgba(139, 69, 19, 0.9);
+}
+
+/* Rewards Section */
+.rewards {
+    background: linear-gradient(135deg, #d7fdd3, #a4e100);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.rewards h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.reward-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.reward-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    max-width: 300px;
+}
+
+.reward-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.reward-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* Interactive Elements */
+.interactive-element {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.interactive-element:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">🏗️ Urban Quest</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#quest">Quest</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#rewards">Rewards</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <canvas id="balatro-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="floating">Build Your Future City</h1>
+        <p>Join our Minecraft-themed urban development quest and discover how YOU can create a happy, healthy city!</p>
+        <a href="#quest" class="cta-button interactive-element">Start Your Adventure</a>
+    </div>
+</section>
+
+<section class="quest-stations" id="quest">
+    <div class="container">
+        <h2>5 Interactive Quest Stations</h2>
+        <div class="stations-grid">
+            <div class="station-card interactive-element">
+                <span class="station-icon">🏙️</span>
+                <h3>Urban Planning Hub</h3>
+                <p>Discover the root causes of urban challenges and learn about sustainable city development through interactive technology demonstrations.</p>
+            </div>
+            <div class="station-card interactive-element">
+                <span class="station-icon">🏃‍♀️</span>
+                <h3>Active Living Station</h3>
+                <p>Experience how sports and physical activities contribute to healthy communities through fun challenges and movement-based learning.</p>
+            </div>
+            <div class="station-card interactive-element">
+                <span class="station-icon">🎨</span>
+                <h3>Creative Arts Corner</h3>
+                <p>Express your vision for the perfect city through artistic activities that blend creativity with urban design principles.</p>
+            </div>
+            <div class="station-card interactive-element">
+                <span class="station-icon">💡</span>
+                <h3>Innovation Lab</h3>
+                <p>Explore cutting-edge technology solutions for urban problems and prototype your own smart city innovations.</p>
+            </div>
+            <div class="station-card interactive-element">
+                <span class="station-icon">🌱</span>
+                <h3>Sustainability Center</h3>
+                <p>Learn about environmental challenges and discover how green initiatives can transform urban landscapes for future generations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="minecraft-section">
+    <div class="minecraft-pattern"></div>
+    <div class="container">
+        <div class="minecraft-content">
+            <h2>⛏️ Minecraft Adventure Awaits!</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">Immerse yourself in a blocky world where urban planning meets gaming fun!</p>
+            
+            <div class="minecraft-features">
+                <div class="minecraft-feature interactive-element">
+                    <h3>🏗️ Build Your City</h3>
+                    <p>Design and construct your ideal urban environment using Minecraft's creative tools and mechanics.</p>
+                </div>
+                <div class="minecraft-feature interactive-element">
+                    <h3>🔍 Solve Challenges</h3>
+                    <p>Navigate through real urban problems reimagined as exciting Minecraft quests and puzzles.</p>
+                </div>
+                <div class="minecraft-feature interactive-element">
+                    <h3>👥 Team Collaboration</h3>
+                    <p>Work together with other participants to create collaborative solutions in a shared virtual space.</p>
+                </div>
+                <div class="minecraft-feature interactive-element">
+                    <h3>🏆 Unlock Achievements</h3>
+                    <p>Complete station challenges to unlock special rewards and progress through the urban development journey.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="partners" id="partners">
+    <div class="container">
+        <h2>Our Partners</h2>
+        <div class="partner-logos">
+            <div class="partner-logo interactive-element">
+                <span>🏛️<br>URA</span>
+            </div>
+            <div class="partner-logo interactive-element">
+                <span>🏃‍♂️<br>ActiveSG</span>
+            </div>
+            <div class="partner-logo interactive-element">
+                <span>🤝<br>People's<br>Association</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="rewards" id="rewards">
+    <div class="container">
+        <h2>🎁 Amazing Rewards Await!</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Complete your quest and unlock incredible opportunities!</p>
+        
+        <div class="reward-cards">
+            <div class="reward-card interactive-element">
+                <div class="reward-icon">📱</div>
+                <h3>QR Code Access</h3>
+                <p>Get instant access to our social platforms and exclusive content with your completion QR code.</p>
+            </div>
+            <div class="reward-card interactive-element">
+                <div class="reward-icon">🏃‍♂️</div>
+                <h3>ActiveSG Credits</h3>
+                <p>Win credits to book sports facilities, join fitness programs, and stay active in your community.</p>
+            </div>
+            <div class="reward-card interactive-element">
+                <div class="reward-icon">🎓</div>
+                <h3>SkillsFuture Credits</h3>
+                <p>Receive Community Centre credits for workshops and activities that align with your urban development interests.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="module">
+    import { Renderer, Program, Mesh, Triangle } from "https://cdn.skypack.dev/ogl";
+
+    function hexToVec4(hex) {
+        let hexStr = hex.replace("#", "");
+        let r = 0, g = 0, b = 0, a = 1;
+        if (hexStr.length === 6) {
+            r = parseInt(hexStr.slice(0, 2), 16) / 255;
+            g = parseInt(hexStr.slice(2, 4), 16) / 255;
+            b = parseInt(hexStr.slice(4, 6), 16) / 255;
+        } else if (hexStr.length === 8) {
+            r = parseInt(hexStr.slice(0, 2), 16) / 255;
+            g = parseInt(hexStr.slice(2, 4), 16) / 255;
+            b = parseInt(hexStr.slice(4, 6), 16) / 255;
+            a = parseInt(hexStr.slice(6, 8), 16) / 255;
+        }
+        return [r, g, b, a];
+    }
+
+    const vertexShader = `
+      attribute vec2 uv;
+      attribute vec2 position;
+      varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = vec4(position, 0, 1);
+      }
+    `;
+
+    const fragmentShader = `
+      precision highp float;
+      uniform float iTime;
+      uniform vec3 iResolution;
+      uniform float uSpinRotation;
+      uniform float uSpinSpeed;
+      uniform vec2 uOffset;
+      uniform vec4 uColor1;
+      uniform vec4 uColor2;
+      uniform vec4 uColor3;
+      uniform float uContrast;
+      uniform float uLighting;
+      uniform float uSpinAmount;
+      uniform float uPixelFilter;
+      uniform float uSpinEase;
+      uniform bool uIsRotate;
+      uniform vec2 uMouse;
+      varying vec2 vUv;
+      vec4 effect(vec2 screenSize, vec2 screen_coords) {
+        vec2 uv = (floor(screen_coords.xy * (1.0 / (length(screenSize.xy)/uPixelFilter))) * (length(screenSize.xy)/uPixelFilter) - 0.5 * screenSize.xy) / length(screenSize.xy) - uOffset;
+        float uv_len = length(uv);
+        float speed = (uSpinRotation * uSpinEase * 0.2);
+        if(uIsRotate) speed = iTime * speed;
+        speed += 302.2;
+        float mouseInfluence = (uMouse.x * 2.0 - 1.0);
+        speed += mouseInfluence * 0.1;
+        float new_pixel_angle = atan(uv.y, uv.x) + speed - uSpinEase * 20.0 * (uSpinAmount * uv_len + (1.0 - uSpinAmount));
+        vec2 mid = (screenSize.xy / length(screenSize.xy)) / 2.0;
+        uv = (vec2(uv_len * cos(new_pixel_angle) + mid.x, uv_len * sin(new_pixel_angle) + mid.y) - mid);
+        uv *= 30.0;
+        float baseSpeed = iTime * uSpinSpeed;
+        speed = baseSpeed + mouseInfluence * 2.0;
+        vec2 uv2 = vec2(uv.x + uv.y);
+        for(int i = 0; i < 5; i++) {
+          uv2 += sin(max(uv.x, uv.y)) + uv;
+          uv += 0.5 * vec2(
+            cos(5.1123314 + 0.353 * uv2.y + speed * 0.131121),
+            sin(uv2.x - 0.113 * speed)
+          );
+          uv -= cos(uv.x + uv.y) - sin(uv.x * 0.711 - uv.y);
+        }
+        float contrast_mod = (0.25 * uContrast + 0.5 * uSpinAmount + 1.2);
+        float paint_res = min(2.0, max(0.0, length(uv) * 0.035 * contrast_mod));
+        float c1p = max(0.0, 1.0 - contrast_mod * abs(1.0 - paint_res));
+        float c2p = max(0.0, 1.0 - contrast_mod * abs(paint_res));
+        float c3p = 1.0 - min(1.0, c1p + c2p);
+        float light = (uLighting - 0.2) * max(c1p * 5.0 - 4.0, 0.0) + uLighting * max(c2p * 5.0 - 4.0, 0.0);
+        return (0.3 / uContrast) * uColor1 + (1.0 - 0.3 / uContrast) * (uColor1 * c1p + uColor2 * c2p + vec4(c3p * uColor3.rgb, c3p * uColor1.a)) + light;
+      }
+      void main() {
+        vec2 uv = vUv * iResolution.xy;
+        gl_FragColor = effect(iResolution.xy, uv);
+      }
+    `;
+
+    const canvas = document.getElementById("balatro-canvas");
+    const renderer = new Renderer({ canvas });
+    const gl = renderer.gl;
+    gl.clearColor(0, 0, 0, 1);
+
+    const geometry = new Triangle(gl);
+    const program = new Program(gl, {
+        vertex: vertexShader,
+        fragment: fragmentShader,
+        uniforms: {
+            iTime: { value: 0 },
+            iResolution: { value: [gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height] },
+            uSpinRotation: { value: -2.0 },
+            uSpinSpeed: { value: 7.0 },
+            uOffset: { value: [0.0, 0.0] },
+            uColor1: { value: hexToVec4("#DE443B") },
+            uColor2: { value: hexToVec4("#006BB4") },
+            uColor3: { value: hexToVec4("#162325") },
+            uContrast: { value: 3.5 },
+            uLighting: { value: 0.4 },
+            uSpinAmount: { value: 0.25 },
+            uPixelFilter: { value: 745.0 },
+            uSpinEase: { value: 1.0 },
+            uIsRotate: { value: false },
+            uMouse: { value: [0.5, 0.5] },
+        },
+    });
+
+    const mesh = new Mesh(gl, { geometry, program });
+
+    function resize() {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        program.uniforms.iResolution.value = [gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height];
+    }
+    window.addEventListener("resize", resize);
+    resize();
+
+    function update(t) {
+        program.uniforms.iTime.value = t * 0.001;
+        renderer.render({ scene: mesh });
+        requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+</script>
+<script>
+// Interactive card effects
+document.addEventListener('DOMContentLoaded', function() {
+    // Interactive element effects
+    document.querySelectorAll('.interactive-element').forEach(element => {
+        element.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05) translateY(-5px)';
+        });
+        
+        element.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) translateY(0)';
+        });
+    });
+    
+    // Scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements for scroll animations
+    document.querySelectorAll('.station-card, .minecraft-feature, .reward-card').forEach(el => {
+        observer.observe(el);
+    });
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

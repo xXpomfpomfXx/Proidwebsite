@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mindcraft</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/advanced-features.css">
+    <link rel="stylesheet" href="../styles/minecraft-theme.css">
+    <link rel="stylesheet" href="../styles/enhanced-dark-theme.css">
+    <link rel="stylesheet" href="../styles/chatbot-dark-fix.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Enhanced Header with Progress Indicator -->
+    <header class="header minecraft-header">
+        <div class="progress-bar-top">
+            <div class="progress-fill" id="pageProgress"></div>
+        </div>
+        <nav class="nav minecraft-nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon minecraft-icon">⛏️</span>
+                    <span class="logo-text">Mindcraft</span>
+                    <div class="logo-subtitle">DMP2025</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="minecraft-nav-link">
+                        <span class="nav-text">Home</span>
+                    </a></li>
+                    <li><a href="about.html" class="minecraft-nav-link active">
+                        <span class="nav-text">About</span>
+                    </a></li>
+                    <li><a href="quest-stations.html" class="minecraft-nav-link">
+                        <span class="nav-text">Quest Stations</span>
+                    </a></li>
+                    <li><a href="minecraft.html" class="minecraft-nav-link">
+                        <span class="nav-text">Minecraft World</span>
+                    </a></li>
+                    <li><a href="partners.html" class="minecraft-nav-link">
+                        <span class="nav-text">Partners</span>
+                    </a></li>
+                    <li><a href="rewards.html" class="minecraft-nav-link">
+                        <span class="nav-text">Rewards</span>
+                    </a></li>
+                    <li><a href="contact.html" class="minecraft-nav-link">
+                        <span class="nav-text">Contact</span>
+                    </a></li>
+                </ul>
+                <div class="nav-actions">
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Enhanced Page Hero with Breadcrumbs -->
+        <section class="page-hero enhanced-page-hero" style="position:relative; background: linear-gradient(135deg, #1a2d13 0%, #3e8138 100%); overflow:hidden;">
+            <div class="hero-bg-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(30,60,30,0.45);z-index:0;"></div>
+            <div class="container" style="position:relative;z-index:1;">
+                <!-- Breadcrumb Navigation -->
+                <nav class="breadcrumb" style="font-size:0.95rem;opacity:0.7;margin-bottom:1.5rem;">
+                    <a href="../index.html" class="breadcrumb-item" style="color:#b2e5c2;">
+                        Home
+                    </a>
+                    <span class="breadcrumb-separator" style="margin:0 0.5rem;">&rsaquo;</span>
+                    <span class="breadcrumb-item active" style="color:#fff;">
+                        About
+                    </span>
+                </nav>
+                <div class="page-hero-content" style="text-align:center;">
+                    <div class="hero-badge" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(0,255,135,0.12);color:#00ff87;padding:0.5rem 1.25rem;border-radius:2rem;font-weight:600;font-size:1rem;margin-bottom:1.5rem;">
+                        <span class="badge-icon" style="font-size:1.2rem;">💡</span>
+                        <span class="badge-text">Our Story</span>
+                    </div>
+                    <h1 class="page-title" style="font-size:clamp(2.5rem,6vw,4rem);font-weight:800;line-height:1.1;margin-bottom:1rem;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,0.18);">About Mindcraft</h1>
+                    <p class="page-subtitle" style="font-size:1.25rem;max-width:700px;margin:0 auto 2.5rem auto;color:#e0ffe0;opacity:0.92;">We're solving a critical problem: youths are unmotivated to show interest in building a happy, healthy city. Here's how we're changing that through DMP2025 engagement.</p>
+                    <!-- Quick Stats -->
+                    <div class="hero-quick-stats" style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:2.5rem;">
+                        <div class="quick-stat stat-card" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border-radius:1.25rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);padding:1.5rem 2.25rem;min-width:120px;display:flex;flex-direction:column;align-items:center;">
+                            <div class="stat-icon" style="font-size:2rem;margin-bottom:0.5rem;color:#00ff87;">📅</div>
+                            <div class="stat-number" style="font-size:2rem;font-weight:700;color:#fff;">2025</div>
+                            <div class="stat-label" style="font-size:1rem;color:#b2e5c2;">Founded</div>
+                        </div>
+                        <div class="quick-stat stat-card" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border-radius:1.25rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);padding:1.5rem 2.25rem;min-width:120px;display:flex;flex-direction:column;align-items:center;">
+                            <div class="stat-icon" style="font-size:2rem;margin-bottom:0.5rem;color:#00ff87;">👥</div>
+                            <div class="stat-number" style="font-size:2rem;font-weight:700;color:#fff;">5K+</div>
+                            <div class="stat-label" style="font-size:1rem;color:#b2e5c2;">Youth Engaged</div>
+                        </div>
+                        <div class="quick-stat stat-card" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border-radius:1.25rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);padding:1.5rem 2.25rem;min-width:120px;display:flex;flex-direction:column;align-items:center;">
+                            <div class="stat-icon" style="font-size:2rem;margin-bottom:0.5rem;color:#00ff87;">🤝</div>
+                            <div class="stat-number" style="font-size:2rem;font-weight:700;color:#fff;">15</div>
+                            <div class="stat-label" style="font-size:1rem;color:#b2e5c2;">Partners</div>
+                        </div>
+                        <div class="quick-stat stat-card" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border-radius:1.25rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);padding:1.5rem 2.25rem;min-width:120px;display:flex;flex-direction:column;align-items:center;">
+                            <div class="stat-icon" style="font-size:2rem;margin-bottom:0.5rem;color:#00ff87;">🌟</div>
+                            <div class="stat-number" style="font-size:2rem;font-weight:700;color:#fff;">95%</div>
+                            <div class="stat-label" style="font-size:1rem;color:#b2e5c2;">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Image Banner with Parallax Effect -->
+        <div class="about-mc-banner parallax-container">
+            <img src="../images/minecraft image 1.webp" alt="Minecraft city" class="page-banner-image parallax-image">
+            <div class="banner-overlay">
+                <div class="banner-content">
+                    <h3>Building Singapore's Future Together</h3>
+                    <p>Where gaming meets urban planning</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Story Timeline -->
+        <section class="story-timeline minecraft-section" style="background: linear-gradient(135deg, #182a1a 0%, #233c22 100%); padding: 4rem 0 3rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align:center; margin-bottom:2.5rem;">
+                    <span class="section-badge" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.4rem 1.1rem;border-radius:2rem;font-weight:600;font-size:1rem;">Our Journey</span>
+                    <h2 class="section-title" style="font-size:2.2rem;font-weight:700;color:#fff;margin:1rem 0 0.5rem 0;">The Problem We're Solving</h2>
+                    <p class="section-subtitle" style="color:#b2e5c2;max-width:600px;margin:0 auto;">Discover how Mindcraft came to be and why we're passionate about engaging youth in DMP2025</p>
+                </div>
+                <div class="timeline-container" style="position:relative;max-width:900px;margin:0 auto;">
+                    <div class="timeline-vertical" style="position:relative;">
+                        <div style="position:absolute;left:50%;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#00ff87 0%,#3e8138 100%);transform:translateX(-50%);z-index:0;border-radius:2px;"></div>
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item" style="display:flex;align-items:flex-start;margin-bottom:3.5rem;position:relative;z-index:1;">
+                            <div style="flex:1;text-align:right;padding-right:2.5rem;">
+                                <div class="timeline-content minecraft-card" style="display:inline-block;background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border-radius:1.25rem;padding:1.5rem 2rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);min-width:260px;text-align:left;">
+                                    <div class="timeline-header" style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;">
+                                        <div class="marker-icon" style="font-size:1.5rem;color:#ffb300;">❗</div>
+                                        <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin:0;">The Challenge Identified</h3>
+                                        <span class="timeline-date" style="font-size:1rem;color:#b2e5c2;">2023</span>
+                                    </div>
+                                    <p style="color:#e0ffe0;opacity:0.92;">Singapore's Development Master Plan 2025 (DMP2025) was being developed, but there was a critical gap: youths were unmotivated to show interest in building a happy, healthy city.</p>
+                                    <div class="timeline-stats" style="margin-top:1rem;">
+                                        <span class="stat-item" style="display:inline-block;background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.9rem;border-radius:1rem;font-size:0.95rem;font-weight:600;">12% Youth engagement in urban planning</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:0;flex:0 0 60px;display:flex;flex-direction:column;align-items:center;">
+                                <div style="width:32px;height:32px;background:#00ff87;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;box-shadow:0 0 0 6px rgba(0,255,135,0.12);margin-bottom:0.5rem;">❗</div>
+                            </div>
+                            <div style="flex:1;"></div>
+                        </div>
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item" style="display:flex;align-items:flex-start;margin-bottom:3.5rem;position:relative;z-index:1;">
+                            <div style="flex:1;"></div>
+                            <div style="width:0;flex:0 0 60px;display:flex;flex-direction:column;align-items:center;">
+                                <div style="width:32px;height:32px;background:#00ff87;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;box-shadow:0 0 0 6px rgba(0,255,135,0.12);margin-bottom:0.5rem;">💡</div>
+                            </div>
+                            <div style="flex:1;text-align:left;padding-left:2.5rem;">
+                                <div class="timeline-content minecraft-card" style="display:inline-block;background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border-radius:1.25rem;padding:1.5rem 2rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);min-width:260px;text-align:left;">
+                                    <div class="timeline-header" style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;">
+                                        <div class="marker-icon" style="font-size:1.5rem;color:#00ff87;">💡</div>
+                                        <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin:0;">The Innovative Solution</h3>
+                                        <span class="timeline-date" style="font-size:1rem;color:#b2e5c2;">2024</span>
+                                    </div>
+                                    <p style="color:#e0ffe0;opacity:0.92;">Our team recognized that traditional engagement methods weren't working for young Singaporeans. We needed a new approach that speaks their language - gaming, technology, and interactive experiences.</p>
+                                    <div class="timeline-features" style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+                                        <span class="feature-tag" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.9rem;border-radius:1rem;font-size:0.95rem;font-weight:600;">Minecraft Integration</span>
+                                        <span class="feature-tag" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.9rem;border-radius:1rem;font-size:0.95rem;font-weight:600;">Interactive Stations</span>
+                                        <span class="feature-tag" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.9rem;border-radius:1rem;font-size:0.95rem;font-weight:600;">Gamification</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-item" style="display:flex;align-items:flex-start;margin-bottom:3.5rem;position:relative;z-index:1;">
+                            <div style="flex:1;text-align:right;padding-right:2.5rem;">
+                                <div class="timeline-content minecraft-card" style="display:inline-block;background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border-radius:1.25rem;padding:1.5rem 2rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);min-width:260px;text-align:left;">
+                                    <div class="timeline-header" style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;">
+                                        <div class="marker-icon" style="font-size:1.5rem;color:#00ff87;">🚀</div>
+                                        <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin:0;">Mindcraft Launched</h3>
+                                        <span class="timeline-date" style="font-size:1rem;color:#b2e5c2;">2025</span>
+                                    </div>
+                                    <p style="color:#e0ffe0;opacity:0.92;">Founded in 2025, Mindcraft now connects thousands of young Singaporeans with DMP2025, making urban planning relevant, accessible, and exciting through innovative engagement strategies.</p>
+                                    <div class="timeline-achievements" style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+                                        <div class="achievement-item" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.9rem;border-radius:1rem;font-size:0.95rem;font-weight:600;">5,000+ Youth Participants</div>
+                                        <div class="achievement-item" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.9rem;border-radius:1rem;font-size:0.95rem;font-weight:600;">85% Increased Interest</div>
+                                    </div>
+                                </div>
+                    </div>
+                            <div style="width:0;flex:0 0 60px;display:flex;flex-direction:column;align-items:center;">
+                                <div style="width:32px;height:32px;background:#00ff87;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;box-shadow:0 0 0 6px rgba(0,255,135,0.12);margin-bottom:0.5rem;">🚀</div>
+                    </div>
+                            <div style="flex:1;"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabbed Content Section -->
+        <section class="about-tabs minecraft-section" style="background:linear-gradient(135deg,#1a2d13 0%,#233c22 100%);padding:4rem 0 3rem 0;">
+            <div class="container">
+                <div class="tab-navigation" style="display:flex;justify-content:center;gap:1.5rem;margin-bottom:2.5rem;position:sticky;top:70px;z-index:10;background:rgba(26,26,36,0.95);backdrop-filter:blur(10px);border-radius:1.5rem 1.5rem 0 0;">
+                    <button class="tab-btn active" data-tab="mission-vision" style="display:flex;align-items:center;gap:0.5rem;padding:1rem 2rem;font-size:1.1rem;font-weight:600;color:#00ff87;background:rgba(0,255,135,0.08);border:none;border-radius:1.5rem 1.5rem 0 0;cursor:pointer;transition:all 0.3s;">🎯 Mission & Vision</button>
+                    <button class="tab-btn" data-tab="values" style="display:flex;align-items:center;gap:0.5rem;padding:1rem 2rem;font-size:1.1rem;font-weight:600;color:#b2e5c2;background:none;border:none;border-radius:1.5rem 1.5rem 0 0;cursor:pointer;transition:all 0.3s;">💎 Our Values</button>
+                    <button class="tab-btn" data-tab="team" style="display:flex;align-items:center;gap:0.5rem;padding:1rem 2rem;font-size:1.1rem;font-weight:600;color:#b2e5c2;background:none;border:none;border-radius:1.5rem 1.5rem 0 0;cursor:pointer;transition:all 0.3s;">👥 Meet the Team</button>
+                    <button class="tab-btn" data-tab="impact" style="display:flex;align-items:center;gap:0.5rem;padding:1rem 2rem;font-size:1.1rem;font-weight:600;color:#b2e5c2;background:none;border:none;border-radius:1.5rem 1.5rem 0 0;cursor:pointer;transition:all 0.3s;">📈 Our Impact</button>
+                </div>
+                <div class="tab-content" style="background:rgba(255,255,255,0.04);border-radius:0 0 1.5rem 1.5rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);padding:2.5rem 1.5rem;">
+                    <!-- Mission & Vision Tab -->
+                    <div class="tab-pane active" id="mission-vision">
+                        <div class="mission-vision-grid" style="display:flex;gap:2.5rem;flex-wrap:wrap;justify-content:center;">
+                            <div class="mission-card minecraft-card enhanced-card" style="flex:1 1 320px;max-width:420px;background:rgba(255,255,255,0.08);border-radius:1.25rem;padding:2rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);">
+                                <div class="card-header" style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+                                    <div class="card-icon minecraft-icon" style="font-size:2rem;color:#00ff87;">🎯</div>
+                                    <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin:0;">Our Mission</h3>
+                                </div>
+                                <div class="card-content">
+                                    <p style="color:#e0ffe0;opacity:0.92;">To engage Singaporean youths in DMP2025 by making urban planning relevant, accessible, and exciting through gamified learning experiences.</p>
+                                    <div class="mission-points" style="margin-top:1.2rem;">
+                                        <div class="point-item" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:#00ff87;font-weight:600;">
+                                            <span class="point-icon">✓</span>
+                                            <span class="point-text" style="color:#fff;font-weight:500;">Make urban planning accessible to all youth</span>
+                                        </div>
+                                        <div class="point-item" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:#00ff87;font-weight:600;">
+                                            <span class="point-icon">✓</span>
+                                            <span class="point-text" style="color:#fff;font-weight:500;">Use gaming to increase engagement</span>
+                                        </div>
+                                        <div class="point-item" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:#00ff87;font-weight:600;">
+                                            <span class="point-icon">✓</span>
+                                            <span class="point-text" style="color:#fff;font-weight:500;">Connect youth voices to DMP2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vision-card minecraft-card enhanced-card" style="flex:1 1 320px;max-width:420px;background:rgba(255,255,255,0.08);border-radius:1.25rem;padding:2rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);">
+                                <div class="card-header" style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+                                    <div class="card-icon minecraft-icon" style="font-size:2rem;color:#00ff87;">🔮</div>
+                                    <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin:0;">Our Vision</h3>
+                                </div>
+                                <div class="card-content">
+                                    <p style="color:#e0ffe0;opacity:0.92;">To create a Singapore where every young person understands their role in building a happy, healthy city and actively participates in shaping our collective future.</p>
+                                    <div class="vision-metrics" style="margin-top:1.2rem;display:flex;gap:1.5rem;justify-content:center;">
+                                        <div class="metric-item" style="text-align:center;">
+                                            <div class="metric-number" style="font-size:1.5rem;font-weight:700;color:#00ff87;">100%</div>
+                                            <div class="metric-label" style="font-size:1rem;color:#b2e5c2;">Youth Awareness</div>
+                                        </div>
+                                        <div class="metric-item" style="text-align:center;">
+                                            <div class="metric-number" style="font-size:1.5rem;font-weight:700;color:#00ff87;">50K+</div>
+                                            <div class="metric-label" style="font-size:1rem;color:#b2e5c2;">Engaged Youth by 2030</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Values Tab -->
+                    <div class="tab-pane" id="values">
+                        <div class="values-grid enhanced-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;">
+                            <div class="value-card minecraft-card interactive-card" style="background:rgba(255,255,255,0.08);border-radius:1.25rem;padding:2rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);">
+                                <div class="value-icon minecraft-icon" style="font-size:2rem;color:#00ff87;margin-bottom:0.5rem;">🎮</div>
+                                <h3 style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">Youth-Centric</h3>
+                                <p style="color:#e0ffe0;opacity:0.92;">We design everything with young Singaporeans in mind, using their language and interests to make urban planning engaging.</p>
+                                <div class="value-details" style="margin-top:1rem;">
+                                    <ul class="detail-list" style="padding-left:1.2rem;color:#b2e5c2;">
+                                        <li>Gaming-first approach</li>
+                                        <li>Youth-friendly language</li>
+                                        <li>Peer-to-peer learning</li>
+                                        <li>Relevant to daily life</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="value-card minecraft-card interactive-card" style="background:rgba(255,255,255,0.08);border-radius:1.25rem;padding:2rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);">
+                                <div class="value-icon minecraft-icon" style="font-size:2rem;color:#00ff87;margin-bottom:0.5rem;">🤝</div>
+                                <h3 style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">Inclusive Engagement</h3>
+                                <p style="color:#e0ffe0;opacity:0.92;">We believe every youth voice matters in DMP2025, regardless of background, education, or prior interest in urban planning.</p>
+                                <div class="value-details" style="margin-top:1rem;">
+                                    <ul class="detail-list" style="padding-left:1.2rem;color:#b2e5c2;">
+                                        <li>Barrier-free participation</li>
+                                        <li>Multiple engagement channels</li>
+                                        <li>Accessible design</li>
+                                        <li>Community outreach</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="value-card minecraft-card interactive-card" style="background:rgba(255,255,255,0.08);border-radius:1.25rem;padding:2rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);">
+                                <div class="value-icon minecraft-icon" style="font-size:2rem;color:#00ff87;margin-bottom:0.5rem;">🌱</div>
+                                <h3 style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">Sustainable Future</h3>
+                                <p style="color:#e0ffe0;opacity:0.92;">We promote the creation of happy, healthy cities that prioritize environmental sustainability and community well-being.</p>
+                                <div class="value-details" style="margin-top:1rem;">
+                                    <ul class="detail-list" style="padding-left:1.2rem;color:#b2e5c2;">
+                                        <li>Environmental awareness</li>
+                                        <li>Green city planning</li>
+                                        <li>Community health focus</li>
+                                        <li>Long-term thinking</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="value-card minecraft-card interactive-card" style="background:rgba(255,255,255,0.08);border-radius:1.25rem;padding:2rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);">
+                                <div class="value-icon minecraft-icon" style="font-size:2rem;color:#00ff87;margin-bottom:0.5rem;">🎓</div>
+                                <h3 style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">Relevant Learning</h3>
+                                <p style="color:#e0ffe0;opacity:0.92;">We make urban planning education directly relevant to youths' daily lives and future aspirations.</p>
+                                <div class="value-details" style="margin-top:1rem;">
+                                    <ul class="detail-list" style="padding-left:1.2rem;color:#b2e5c2;">
+                                        <li>Real-world applications</li>
+                                        <li>Practical skills development</li>
+                                        <li>Career pathway insights</li>
+                                        <li>Future-ready preparation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Tab -->
+                    <div class="tab-pane" id="team">
+                        <div class="team-intro" style="text-align:center;margin-bottom:3rem;">
+                            <h3 style="font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">Meet Our Team</h3>
+                            <p style="color:#b2e5c2;max-width:600px;margin:0 auto;font-size:1.1rem;">The passionate individuals behind Mindcraft's mission to engage Singaporean youth in DMP2025</p>
+                        </div>
+                        <div class="team-grid enhanced-team" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem;">
+                            <div class="team-member minecraft-card enhanced-member-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2.5rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);display:flex;flex-direction:column;align-items:center;border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;position:relative;overflow:hidden;">
+                                <div class="member-header" style="display:flex;flex-direction:column;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+                                    <div class="member-avatar minecraft-icon" style="font-size:3rem;background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;width:80px;height:80px;display:flex;align-items:center;justify-content:center;border-radius:50%;box-shadow:0 0 0 8px rgba(0,255,135,0.15),0 4px 16px rgba(0,255,135,0.3);transition:all 0.3s ease;">👨‍💼</div>
+                                    <div class="member-info" style="text-align:center;">
+                                        <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin:0;">Shanelle</h3>
+                                        <p class="member-role" style="color:#00ff87;font-size:1rem;margin:0.5rem 0 0.75rem 0;font-weight:600;">Founder & Urban Planner</p>
+                                        <div class="member-badges" style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;">
+                                            <span class="badge" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">15+ Years Experience</span>
+                                            <span class="badge" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">DMP2025 Expert</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="member-content" style="color:#e0ffe0;opacity:0.92;text-align:center;line-height:1.6;">
+                                    With 15+ years in urban planning, Shanelle leads our mission to make DMP2025 accessible and engaging for Singaporean youths.
+                                    <div class="member-specialties" style="margin-top:1.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;">
+                                        <span class="specialty" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">Urban Strategy</span>
+                                        <span class="specialty" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">Youth Engagement</span>
+                                        <span class="specialty" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">Policy Development</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-member minecraft-card enhanced-member-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2.5rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);display:flex;flex-direction:column;align-items:center;border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;position:relative;overflow:hidden;">
+                                <div class="member-header" style="display:flex;flex-direction:column;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+                                    <div class="member-avatar minecraft-icon" style="font-size:3rem;background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;width:80px;height:80px;display:flex;align-items:center;justify-content:center;border-radius:50%;box-shadow:0 0 0 8px rgba(0,255,135,0.15),0 4px 16px rgba(0,255,135,0.3);transition:all 0.3s ease;">👩‍💻</div>
+                                    <div class="member-info" style="text-align:center;">
+                                        <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin:0;">Akid</h3>
+                                        <p class="member-role" style="color:#00ff87;font-size:1rem;margin:0.5rem 0 0.75rem 0;font-weight:600;">Game Developer</p>
+                                        <div class="member-badges" style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;">
+                                            <span class="badge" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">Minecraft Expert</span>
+                                            <span class="badge" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">Game Design</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="member-content" style="color:#e0ffe0;opacity:0.92;text-align:center;line-height:1.6;">
+                                    Akid creates the Minecraft experiences that make urban planning concepts come alive for young participants.
+                                    <div class="member-specialties" style="margin-top:1.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;">
+                                        <span class="specialty" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">Minecraft Development</span>
+                                        <span class="specialty" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">3D Modeling</span>
+                                        <span class="specialty" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">Interactive Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-member minecraft-card enhanced-member-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2.5rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);display:flex;flex-direction:column;align-items:center;border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;position:relative;overflow:hidden;">
+                                <div class="member-header" style="display:flex;flex-direction:column;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+                                    <div class="member-avatar minecraft-icon" style="font-size:3rem;background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;width:80px;height:80px;display:flex;align-items:center;justify-content:center;border-radius:50%;box-shadow:0 0 0 8px rgba(0,255,135,0.15),0 4px 16px rgba(0,255,135,0.3);transition:all 0.3s ease;">👨‍🏫</div>
+                                    <div class="member-info" style="text-align:center;">
+                                        <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin:0;">Dylan</h3>
+                                        <p class="member-role" style="color:#00ff87;font-size:1rem;margin:0.5rem 0 0.75rem 0;font-weight:600;">Education Director</p>
+                                        <div class="member-badges" style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;">
+                                            <span class="badge" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">Learning Specialist</span>
+                                            <span class="badge" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">Youth Psychology</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="member-content" style="color:#e0ffe0;opacity:0.92;text-align:center;line-height:1.6;">
+                                    Dylan ensures our programs effectively bridge the gap between youth interests and DMP2025 planning concepts.
+                                    <div class="member-specialties" style="margin-top:1.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;">
+                                        <span class="specialty" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">Curriculum Design</span>
+                                        <span class="specialty" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">Learning Psychology</span>
+                                        <span class="specialty" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">Assessment</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-member minecraft-card enhanced-member-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2.5rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);display:flex;flex-direction:column;align-items:center;border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;position:relative;overflow:hidden;">
+                                <div class="member-header" style="display:flex;flex-direction:column;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+                                    <div class="member-avatar minecraft-icon" style="font-size:3rem;background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;width:80px;height:80px;display:flex;align-items:center;justify-content:center;border-radius:50%;box-shadow:0 0 0 8px rgba(0,255,135,0.15),0 4px 16px rgba(0,255,135,0.3);transition:all 0.3s ease;">👩‍🎨</div>
+                                    <div class="member-info" style="text-align:center;">
+                                        <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin:0;">Iffah</h3>
+                                        <p class="member-role" style="color:#00ff87;font-size:1rem;margin:0.5rem 0 0.75rem 0;font-weight:600;">Community Coordinator</p>
+                                        <div class="member-badges" style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;">
+                                            <span class="badge" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">Community Builder</span>
+                                            <span class="badge" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">Outreach Expert</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="member-content" style="color:#e0ffe0;opacity:0.92;text-align:center;line-height:1.6;">
+                                    Iffah builds partnerships with youth organizations and ensures our programs reach the communities that need them most.
+                                    <div class="member-specialties" style="margin-top:1.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;">
+                                        <span class="specialty" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">Community Outreach</span>
+                                        <span class="specialty" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">Partnership Development</span>
+                                        <span class="specialty" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">Event Management</span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+
+                    <!-- Impact Tab -->
+                    <div class="tab-pane" id="impact">
+                        <div class="impact-dashboard" style="padding:1.5rem 0;">
+                            <div class="impact-header" style="text-align:center;margin-bottom:3rem;">
+                                <h3 style="font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">Our Impact on DMP2025 Engagement</h3>
+                                <p style="color:#b2e5c2;max-width:600px;margin:0 auto;font-size:1.1rem;">Real numbers showing how we're changing youth participation in urban planning</p>
+                            </div>
+                            <div class="impact-stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2.5rem;margin-bottom:3rem;">
+                                <div class="stat-card minecraft-card enhanced-stat" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2.5rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);display:flex;flex-direction:column;align-items:center;border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                                    <div class="stat-icon" style="font-size:2.5rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">👥</div>
+                                    <div class="stat-number" style="font-size:2.5rem;font-weight:800;color:#fff;margin-bottom:0.5rem;text-shadow:0 2px 8px rgba(0,0,0,0.2);">5,000+</div>
+                                    <div class="stat-label" style="font-size:1.1rem;color:#b2e5c2;font-weight:600;margin-bottom:0.5rem;">Youth Participants</div>
+                                    <div class="stat-growth" style="font-size:1rem;color:#00ff87;font-weight:600;background:rgba(0,255,135,0.1);padding:0.5rem 1rem;border-radius:1rem;">+150% this year</div>
+                                </div>
+                                <div class="stat-card minecraft-card enhanced-stat" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2.5rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);display:flex;flex-direction:column;align-items:center;border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                                    <div class="stat-icon" style="font-size:2.5rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🎯</div>
+                                    <div class="stat-number" style="font-size:2.5rem;font-weight:800;color:#fff;margin-bottom:0.5rem;text-shadow:0 2px 8px rgba(0,0,0,0.2);">50</div>
+                                    <div class="stat-label" style="font-size:1.1rem;color:#b2e5c2;font-weight:600;margin-bottom:0.5rem;">DMP2025 Events</div>
+                                    <div class="stat-growth" style="font-size:1rem;color:#00ff87;font-weight:600;background:rgba(0,255,135,0.1);padding:0.5rem 1rem;border-radius:1rem;">Across Singapore</div>
+                                </div>
+                                <div class="stat-card minecraft-card enhanced-stat" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2.5rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);display:flex;flex-direction:column;align-items:center;border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                                    <div class="stat-icon" style="font-size:2.5rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🤝</div>
+                                    <div class="stat-number" style="font-size:2.5rem;font-weight:800;color:#fff;margin-bottom:0.5rem;text-shadow:0 2px 8px rgba(0,0,0,0.2);">15</div>
+                                    <div class="stat-label" style="font-size:1.1rem;color:#b2e5c2;font-weight:600;margin-bottom:0.5rem;">Partner Organizations</div>
+                                    <div class="stat-growth" style="font-size:1rem;color:#00ff87;font-weight:600;background:rgba(0,255,135,0.1);padding:0.5rem 1rem;border-radius:1rem;">Including URA & ActiveSG</div>
+                                </div>
+                                <div class="stat-card minecraft-card enhanced-stat" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2.5rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);display:flex;flex-direction:column;align-items:center;border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                                    <div class="stat-icon" style="font-size:2.5rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">📈</div>
+                                    <div class="stat-number" style="font-size:2.5rem;font-weight:800;color:#fff;margin-bottom:0.5rem;text-shadow:0 2px 8px rgba(0,0,0,0.2);">95%</div>
+                                    <div class="stat-label" style="font-size:1.1rem;color:#b2e5c2;font-weight:600;margin-bottom:0.5rem;">Satisfaction Rate</div>
+                                    <div class="stat-growth" style="font-size:1rem;color:#00ff87;font-weight:600;background:rgba(0,255,135,0.1);padding:0.5rem 1rem;border-radius:1rem;">Exceptional feedback</div>
+                                </div>
+                            </div>
+                            <!-- Enhanced Impact Timeline -->
+                            <div class="impact-timeline" style="margin-top:3rem;">
+                                <h4 style="color:#00ff87;font-size:1.3rem;font-weight:700;margin-bottom:1.5rem;text-align:center;">Key Milestones</h4>
+                                <div class="milestone-track" style="display:flex;gap:2rem;overflow-x:auto;padding:1rem 0 2rem 0;scrollbar-width:thin;scrollbar-color:#00ff87 rgba(0,255,135,0.1);">
+                                    <div class="milestone achieved" style="background:linear-gradient(135deg,rgba(0,255,135,0.15) 0%,rgba(0,255,135,0.08) 100%);color:#00ff87;padding:1.5rem 2rem;border-radius:1.25rem;min-width:200px;text-align:center;box-shadow:0 4px 16px rgba(0,255,135,0.15);border:1px solid rgba(0,255,135,0.2);transition:all 0.3s ease;">
+                                        <div class="milestone-date" style="font-size:1.1rem;font-weight:700;margin-bottom:0.5rem;">Q1 2025</div>
+                                        <div class="milestone-title" style="font-size:1.15rem;font-weight:700;margin-top:0.5rem;">First 1,000 Youth Engaged</div>
+                                        <div class="milestone-status" style="font-size:0.9rem;color:#b2e5c2;margin-top:0.5rem;">✓ Completed</div>
+                                    </div>
+                                    <div class="milestone achieved" style="background:linear-gradient(135deg,rgba(0,255,135,0.15) 0%,rgba(0,255,135,0.08) 100%);color:#00ff87;padding:1.5rem 2rem;border-radius:1.25rem;min-width:200px;text-align:center;box-shadow:0 4px 16px rgba(0,255,135,0.15);border:1px solid rgba(0,255,135,0.2);transition:all 0.3s ease;">
+                                        <div class="milestone-date" style="font-size:1.1rem;font-weight:700;margin-bottom:0.5rem;">Q2 2025</div>
+                                        <div class="milestone-title" style="font-size:1.15rem;font-weight:700;margin-top:0.5rem;">Partnership with URA Established</div>
+                                        <div class="milestone-status" style="font-size:0.9rem;color:#b2e5c2;margin-top:0.5rem;">✓ Completed</div>
+                                    </div>
+                                    <div class="milestone achieved" style="background:linear-gradient(135deg,rgba(0,255,135,0.15) 0%,rgba(0,255,135,0.08) 100%);color:#00ff87;padding:1.5rem 2rem;border-radius:1.25rem;min-width:200px;text-align:center;box-shadow:0 4px 16px rgba(0,255,135,0.15);border:1px solid rgba(0,255,135,0.2);transition:all 0.3s ease;">
+                                        <div class="milestone-date" style="font-size:1.1rem;font-weight:700;margin-bottom:0.5rem;">Q3 2025</div>
+                                        <div class="milestone-title" style="font-size:1.15rem;font-weight:700;margin-top:0.5rem;">Minecraft World Launched</div>
+                                        <div class="milestone-status" style="font-size:0.9rem;color:#b2e5c2;margin-top:0.5rem;">✓ Completed</div>
+                                    </div>
+                                    <div class="milestone current" style="background:linear-gradient(135deg,rgba(0,255,135,0.25) 0%,rgba(0,255,135,0.15) 100%);color:#fff;padding:1.5rem 2rem;border-radius:1.25rem;min-width:200px;text-align:center;box-shadow:0 6px 24px rgba(0,255,135,0.25);border:2px solid #00ff87;transition:all 0.3s ease;">
+                                        <div class="milestone-date" style="font-size:1.1rem;font-weight:700;margin-bottom:0.5rem;">Q4 2025</div>
+                                        <div class="milestone-title" style="font-size:1.15rem;font-weight:700;margin-top:0.5rem;">5,000 Youth Milestone Reached</div>
+                                        <div class="milestone-status" style="font-size:0.9rem;color:#00ff87;margin-top:0.5rem;font-weight:600;">🔄 In Progress</div>
+                                    </div>
+                                    <div class="milestone upcoming" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);color:#b2e5c2;padding:1.5rem 2rem;border-radius:1.25rem;min-width:200px;text-align:center;box-shadow:0 4px 16px rgba(0,255,135,0.08);border:1px solid rgba(255,255,255,0.1);transition:all 0.3s ease;">
+                                        <div class="milestone-date" style="font-size:1.1rem;font-weight:700;margin-bottom:0.5rem;">Q1 2026</div>
+                                        <div class="milestone-title" style="font-size:1.15rem;font-weight:700;margin-top:0.5rem;">10,000 Youth Target</div>
+                                        <div class="milestone-status" style="font-size:0.9rem;color:#b2e5c2;margin-top:0.5rem;">⏳ Planned</div>
+                                    </div>
+                                </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced CTA Section -->
+        <section class="cta-section minecraft-section enhanced-cta" style="background:linear-gradient(135deg,#1a2d13 0%,#233c22 100%);padding:4rem 0;">
+            <div class="cta-particles"></div>
+            <div class="container">
+                <div class="cta-content" style="text-align:center;max-width:800px;margin:0 auto;">
+                    <div class="cta-icon floating" style="font-size:3rem;margin-bottom:1.5rem;filter:drop-shadow(0 4px 16px rgba(0,255,135,0.3));">🚀</div>
+                    <h2 style="font-size:2.5rem;font-weight:700;color:#fff;margin-bottom:1rem;text-shadow:0 2px 8px rgba(0,0,0,0.2);">Ready to Make Your Voice Heard?</h2>
+                    <p style="color:#e0ffe0;font-size:1.2rem;margin-bottom:2.5rem;line-height:1.6;opacity:0.92;">Join thousands of young Singaporeans who are already shaping DMP2025 and building the happy, healthy city they want to live in.</p>
+                    
+                    <div class="cta-options" style="display:flex;gap:2rem;justify-content:center;margin-bottom:3rem;flex-wrap:wrap;">
+                        <div class="cta-option" data-option="quest" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.25rem;padding:2rem;box-shadow:0 4px 16px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;min-width:200px;">
+                            <div class="option-icon" style="font-size:2rem;color:#00ff87;margin-bottom:1rem;">🎯</div>
+                            <h4 style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">Start Quest Stations</h4>
+                            <p style="color:#b2e5c2;font-size:0.95rem;">Begin your DMP2025 journey</p>
+                        </div>
+                        <div class="cta-option" data-option="contact" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.25rem;padding:2rem;box-shadow:0 4px 16px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;min-width:200px;">
+                            <div class="option-icon" style="font-size:2rem;color:#00ff87;margin-bottom:1rem;">💬</div>
+                            <h4 style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">Get in Touch</h4>
+                            <p style="color:#b2e5c2;font-size:0.95rem;">Connect with our team</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons" style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+                        <a href="quest-stations.html" class="btn btn-primary btn-large" style="background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;padding:1rem 2.5rem;border-radius:2rem;text-decoration:none;font-weight:600;font-size:1.1rem;box-shadow:0 4px 16px rgba(0,255,135,0.3);transition:all 0.3s ease;display:flex;align-items:center;gap:0.5rem;">
+                            <span class="btn-icon" style="font-size:1.2rem;">🚀</span>
+                            <span class="btn-text">Start Your DMP2025 Journey</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary btn-large" style="background:rgba(255,255,255,0.1);color:#fff;padding:1rem 2.5rem;border-radius:2rem;text-decoration:none;font-weight:600;font-size:1.1rem;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;display:flex;align-items:center;gap:0.5rem;">
+                            <span class="btn-icon" style="font-size:1.2rem;">💬</span>
+                            <span class="btn-text">Get in Touch</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer minecraft-footer enhanced-footer" style="background:linear-gradient(135deg,#0f1a0f 0%,#1a2d13 100%);padding:3rem 0 1rem 0;border-top:1px solid rgba(0,255,135,0.1);">
+        <div class="container">
+            <div class="footer-content" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:3rem;margin-bottom:2rem;">
+                <div class="footer-section">
+                    <h3 style="font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:1rem;">Mindcraft</h3>
+                    <p style="color:#b2e5c2;line-height:1.6;margin-bottom:1.5rem;">Building better cities through interactive learning and community engagement.</p>
+                    <div class="social-links" style="display:flex;gap:1rem;">
+                        <a href="#" class="social-link" style="display:flex;align-items:center;gap:0.5rem;color:#00ff87;text-decoration:none;padding:0.5rem 1rem;background:rgba(0,255,135,0.1);border-radius:1rem;transition:all 0.3s ease;">
+                            <span class="social-icon" style="font-size:1.2rem;">📘</span>
+                            <span class="social-label" style="font-size:0.9rem;font-weight:600;">Facebook</span>
+                        </a>
+                        <a href="#" class="social-link" style="display:flex;align-items:center;gap:0.5rem;color:#00ff87;text-decoration:none;padding:0.5rem 1rem;background:rgba(0,255,135,0.1);border-radius:1rem;transition:all 0.3s ease;">
+                            <span class="social-icon" style="font-size:1.2rem;">📷</span>
+                            <span class="social-label" style="font-size:0.9rem;font-weight:600;">Instagram</span>
+                        </a>
+                        <a href="#" class="social-link" style="display:flex;align-items:center;gap:0.5rem;color:#00ff87;text-decoration:none;padding:0.5rem 1rem;background:rgba(0,255,135,0.1);border-radius:1rem;transition:all 0.3s ease;">
+                            <span class="social-icon" style="font-size:1.2rem;">🐦</span>
+                            <span class="social-label" style="font-size:0.9rem;font-weight:600;">Twitter</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:1rem;">Quick Links</h4>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        <li style="margin-bottom:0.5rem;"><a href="about.html" style="color:#b2e5c2;text-decoration:none;transition:color 0.3s ease;">About Us</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="quest-stations.html" style="color:#b2e5c2;text-decoration:none;transition:color 0.3s ease;">Quest Stations</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="minecraft.html" style="color:#b2e5c2;text-decoration:none;transition:color 0.3s ease;">Minecraft World</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="rewards.html" style="color:#b2e5c2;text-decoration:none;transition:color 0.3s ease;">Rewards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:1rem;">Partners</h4>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        <li style="margin-bottom:0.5rem;color:#b2e5c2;">URA</li>
+                        <li style="margin-bottom:0.5rem;color:#b2e5c2;">ActiveSG</li>
+                        <li style="margin-bottom:0.5rem;color:#b2e5c2;">People's Association</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:1rem;">Contact</h4>
+                    <div style="color:#b2e5c2;line-height:1.8;">
+                        <p style="margin-bottom:0.5rem;">📧 info@urbanquest.sg</p>
+                        <p style="margin-bottom:0.5rem;">📞 +65 1234 5678</p>
+                        <p style="margin-bottom:0.5rem;">📍 Singapore</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+                <p style="color:#b2e5c2;margin:0;font-size:0.9rem;">&copy; 2024 Mindcraft. All rights reserved.</p>
+                <div class="footer-links" style="display:flex;gap:1.5rem;">
+                    <a href="#" style="color:#b2e5c2;text-decoration:none;font-size:0.9rem;transition:color 0.3s ease;">Privacy Policy</a>
+                    <a href="#" style="color:#b2e5c2;text-decoration:none;font-size:0.9rem;transition:color 0.3s ease;">Terms of Service</a>
+                    <a href="#" style="color:#b2e5c2;text-decoration:none;font-size:0.9rem;transition:color 0.3s ease;">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/advanced-chatbot.js"></script>
+</body>
+</html> 

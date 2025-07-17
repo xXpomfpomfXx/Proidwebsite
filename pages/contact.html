@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mindcraft</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/advanced-features.css">
+    <link rel="stylesheet" href="../styles/minecraft-theme.css">
+    <link rel="stylesheet" href="../styles/enhanced-dark-theme.css">
+    <link rel="stylesheet" href="../styles/chatbot-dark-fix.css">
+    <link rel="stylesheet" href="../styles/contact-enhancements.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header minecraft-header">
+        <nav class="nav minecraft-nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon minecraft-icon">⛏️</span>
+                    <span class="logo-text">Mindcraft</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="minecraft-nav-link">Home</a></li>
+                    <li><a href="about.html" class="minecraft-nav-link">About</a></li>
+                    <li><a href="quest-stations.html" class="minecraft-nav-link">Quest Stations</a></li>
+                    <li><a href="minecraft.html" class="minecraft-nav-link">Minecraft World</a></li>
+                    <li><a href="partners.html" class="minecraft-nav-link">Partners</a></li>
+                    <li><a href="rewards.html" class="minecraft-nav-link">Rewards</a></li>
+                    <li><a href="contact.html" class="minecraft-nav-link active">Contact</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Enhanced Hero Section -->
+        <section class="page-hero contact-hero">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="breadcrumb-nav">
+                    <a href="../index.html" class="breadcrumb-link">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current">Contact</span>
+                </div>
+                <div class="page-hero-content">
+                    <div class="hero-badge">📞 Get In Touch</div>
+                    <h1 class="page-title">Contact Mindcraft</h1>
+                    <p class="page-subtitle">Ready to make your voice heard in DMP2025? Connect with our team and start your journey to shape Singapore's future through interactive learning and community engagement.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Youth Engaged</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Events Hosted</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Support Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Contact Content -->
+        <section class="contact-content minecraft-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Enhanced Contact Form -->
+                    <div class="contact-form-section minecraft-card glassmorphism-card">
+                        <div class="form-header">
+                            <div class="form-icon">📝</div>
+                            <h2>Start Your DMP2025 Journey</h2>
+                            <p>Tell us about your interests and how you'd like to get involved in shaping Singapore's future.</p>
+                        </div>
+                        <form class="contact-form enhanced-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="name" name="name" required>
+                                        <div class="input-icon">👤</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <div class="input-wrapper">
+                                        <input type="email" id="email" name="email" required>
+                                        <div class="input-icon">📧</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <div class="input-wrapper">
+                                    <input type="tel" id="phone" name="phone">
+                                    <div class="input-icon">📞</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">What would you like to do? *</label>
+                                <div class="select-wrapper">
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Select an option</option>
+                                        <option value="join-event">🎯 Join a DMP2025 Event</option>
+                                        <option value="register">📚 Register for Quest Stations</option>
+                                        <option value="minecraft">🎮 Access Minecraft World</option>
+                                        <option value="share-ideas">💡 Share My Ideas for Singapore</option>
+                                        <option value="volunteer">🤝 Volunteer with Mindcraft</option>
+                                        <option value="partnership">🤝 Partnership Opportunities</option>
+                                        <option value="feedback">📝 Feedback & Suggestions</option>
+                                        <option value="other">❓ Other</option>
+                                    </select>
+                                    <div class="select-icon">▼</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Tell us more about your interest in DMP2025 *</label>
+                                <div class="textarea-wrapper">
+                                    <textarea id="message" name="message" rows="6" required placeholder="What aspects of Singapore's future are you most interested in? What would make you care more about urban planning? Share your thoughts and ideas..."></textarea>
+                                    <div class="textarea-icon">💭</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label enhanced-checkbox">
+                                    <input type="checkbox" name="newsletter" id="newsletter">
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">Subscribe to DMP2025 updates and youth engagement opportunities</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label enhanced-checkbox">
+                                    <input type="checkbox" name="privacy" id="privacy" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">I agree to the <a href="#" class="privacy-link">Privacy Policy</a> *</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary submit-btn enhanced-btn">
+                                <span class="btn-text">🚀 Start My DMP2025 Journey</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <div class="loading-spinner"></div>
+                                    Sending...
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Enhanced Contact Info -->
+                    <div class="contact-info-section">
+                        <div class="contact-info-card glassmorphism-card">
+                            <div class="card-header">
+                                <div class="card-icon">📞</div>
+                                <h2>Get Involved in DMP2025</h2>
+                                <p>Multiple ways to connect with our team and start your urban planning journey.</p>
+                            </div>
+                            
+                            <div class="contact-info-grid">
+                                <div class="contact-item enhanced-card">
+                                    <div class="contact-icon-wrapper">
+                                        <div class="contact-icon">📧</div>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h3>Email</h3>
+                                        <p class="contact-value">info@urbanquest.sg</p>
+                                        <p class="contact-value">dmp2025@urbanquest.sg</p>
+                                        <span class="response-time">Response within 24 hours</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item enhanced-card">
+                                    <div class="contact-icon-wrapper">
+                                        <div class="contact-icon">📞</div>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h3>Phone</h3>
+                                        <p class="contact-value">+65 1234 5678</p>
+                                        <p class="contact-value">Mon-Fri: 9AM-6PM</p>
+                                        <span class="response-time">Immediate assistance</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item enhanced-card">
+                                    <div class="contact-icon-wrapper">
+                                        <div class="contact-icon">📍</div>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h3>Address</h3>
+                                        <p class="contact-value">Mindcraft Headquarters</p>
+                                        <p class="contact-value">123 Innovation Drive</p>
+                                        <p class="contact-value">Singapore 123456</p>
+                                        <span class="response-time">Visit by appointment</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item enhanced-card">
+                                    <div class="contact-icon-wrapper">
+                                        <div class="contact-icon">🌐</div>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h3>Social Media</h3>
+                                        <div class="social-links-contact">
+                                            <a href="#" class="social-link enhanced-social">📘 Facebook</a>
+                                            <a href="#" class="social-link enhanced-social">📷 Instagram</a>
+                                            <a href="#" class="social-link enhanced-social">🐦 Twitter</a>
+                                            <a href="#" class="social-link enhanced-social">💼 LinkedIn</a>
+                                        </div>
+                                        <span class="response-time">Real-time updates</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Enhanced FAQ Section -->
+                        <div class="faq-section glassmorphism-card">
+                            <div class="faq-header">
+                                <div class="faq-icon">❓</div>
+                                <h3>Frequently Asked Questions</h3>
+                            </div>
+                            <div class="faq-grid">
+                                <div class="faq-item enhanced-card">
+                                    <h4>How does Mindcraft help with DMP2025?</h4>
+                                    <p>We make DMP2025 relevant to youths through gamified learning and ensure your ideas reach Singapore's urban planning authorities.</p>
+                                </div>
+                                <div class="faq-item enhanced-card">
+                                    <h4>Do I need urban planning knowledge?</h4>
+                                    <p>No! We're designed for youths who want to learn. We make urban planning fun and relevant to your daily life.</p>
+                                </div>
+                                <div class="faq-item enhanced-card">
+                                    <h4>How do I share my ideas for Singapore's future?</h4>
+                                    <p>Complete our quest stations, participate in Minecraft challenges, or contact us directly to share your vision.</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline enhanced-btn">📚 View All FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Map Section -->
+        <section class="map-section enhanced-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Find Us</h2>
+                    <p class="section-subtitle">Visit our headquarters and experience urban planning in action</p>
+                </div>
+                <div class="map-container glassmorphism-card">
+                    <div class="map-placeholder enhanced-map">
+                        <div class="map-content">
+                            <div class="map-icon">🗺️</div>
+                            <h3>Interactive Map</h3>
+                            <p>Click to view our location and get directions to Mindcraft headquarters</p>
+                            <button class="btn btn-primary map-btn enhanced-btn">Open Map</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Office Hours -->
+        <section class="office-hours enhanced-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Office Hours</h2>
+                    <p class="section-subtitle">When you can reach us for in-person consultations and events</p>
+                </div>
+                <div class="hours-grid">
+                    <div class="hours-card enhanced-card">
+                        <div class="hours-icon">📅</div>
+                        <div class="day">Monday - Friday</div>
+                        <div class="time">9:00 AM - 6:00 PM</div>
+                        <span class="status available">Available</span>
+                    </div>
+                    <div class="hours-card enhanced-card">
+                        <div class="hours-icon">📅</div>
+                        <div class="day">Saturday</div>
+                        <div class="time">10:00 AM - 4:00 PM</div>
+                        <span class="status available">Available</span>
+                    </div>
+                    <div class="hours-card enhanced-card">
+                        <div class="hours-icon">📅</div>
+                        <div class="day">Sunday</div>
+                        <div class="time">Closed</div>
+                        <span class="status closed">Closed</span>
+                    </div>
+                    <div class="hours-card enhanced-card">
+                        <div class="hours-icon">📅</div>
+                        <div class="day">Public Holidays</div>
+                        <div class="time">Closed</div>
+                        <span class="status closed">Closed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced CTA Section -->
+        <section class="cta-section enhanced-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <div class="cta-icon">🚀</div>
+                    <h2>Ready to Start Your Mindcraft?</h2>
+                    <p>Join our next event and discover the exciting world of urban planning through interactive gaming and community engagement.</p>
+                    <div class="cta-buttons">
+                        <a href="quest-stations.html" class="btn btn-primary enhanced-btn">Explore Events</a>
+                        <a href="about.html" class="btn btn-secondary enhanced-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer enhanced-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mindcraft</h3>
+                    <p>Building better cities through interactive learning and community engagement.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="quest-stations.html">Quest Stations</a></li>
+                        <li><a href="minecraft.html">Minecraft World</a></li>
+                        <li><a href="rewards.html">Rewards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Partners</h4>
+                    <ul>
+                        <li>URA</li>
+                        <li>ActiveSG</li>
+                        <li>People's Association</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 info@urbanquest.sg</p>
+                    <p>📞 +65 1234 5678</p>
+                    <p>📍 Singapore</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mindcraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/contact.js"></script>
+    <script src="../scripts/advanced-chatbot.js"></script>
+</body>
+</html> 

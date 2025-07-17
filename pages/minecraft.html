@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft World - Mindcraft</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/advanced-features.css">
+    <link rel="stylesheet" href="../styles/minecraft-theme.css">
+    <link rel="stylesheet" href="../styles/enhanced-dark-theme.css">
+    <link rel="stylesheet" href="../styles/chatbot-dark-fix.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Enhanced Header with Progress Indicator -->
+    <header class="header minecraft-header">
+        <div class="progress-bar-top">
+            <div class="progress-fill" id="pageProgress"></div>
+        </div>
+        <nav class="nav minecraft-nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon minecraft-icon">⛏️</span>
+                    <span class="logo-text">Mindcraft</span>
+                    <div class="logo-subtitle">DMP2025</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="minecraft-nav-link">
+                        <span class="nav-text">Home</span>
+                    </a></li>
+                    <li><a href="about.html" class="minecraft-nav-link">
+                        <span class="nav-text">About</span>
+                    </a></li>
+                    <li><a href="quest-stations.html" class="minecraft-nav-link">
+                        <span class="nav-text">Quest Stations</span>
+                    </a></li>
+                    <li><a href="minecraft.html" class="minecraft-nav-link active">
+                        <span class="nav-text">Minecraft World</span>
+                    </a></li>
+                    <li><a href="partners.html" class="minecraft-nav-link">
+                        <span class="nav-text">Partners</span>
+                    </a></li>
+                    <li><a href="rewards.html" class="minecraft-nav-link">
+                        <span class="nav-text">Rewards</span>
+                    </a></li>
+                    <li><a href="contact.html" class="minecraft-nav-link">
+                        <span class="nav-text">Contact</span>
+                    </a></li>
+                </ul>
+                <div class="nav-actions">
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Enhanced Page Hero with Breadcrumbs -->
+        <section class="page-hero enhanced-page-hero" style="position:relative; background: linear-gradient(135deg, #1a2d13 0%, #3e8138 100%); overflow:hidden;">
+            <div class="hero-bg-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(30,60,30,0.45);z-index:0;"></div>
+            <div class="container" style="position:relative;z-index:1;">
+                <!-- Breadcrumb Navigation -->
+                <nav class="breadcrumb" style="font-size:0.95rem;opacity:0.7;margin-bottom:1.5rem;">
+                    <a href="../index.html" class="breadcrumb-item" style="color:#b2e5c2;">
+                        Home
+                    </a>
+                    <span class="breadcrumb-separator" style="margin:0 0.5rem;">&rsaquo;</span>
+                    <span class="breadcrumb-item active" style="color:#fff;">
+                        Minecraft World
+                    </span>
+                </nav>
+                <div class="page-hero-content" style="text-align:center;">
+                    <div class="hero-badge" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(0,255,135,0.12);color:#00ff87;padding:0.5rem 1.25rem;border-radius:2rem;font-weight:600;font-size:1rem;margin-bottom:1.5rem;">
+                        <span class="badge-icon" style="font-size:1.2rem;">⛏️</span>
+                        <span class="badge-text">Virtual Singapore</span>
+                    </div>
+                    <h1 class="page-title" style="font-size:clamp(2.5rem,6vw,4rem);font-weight:800;line-height:1.1;margin-bottom:1rem;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,0.18);">Minecraft World</h1>
+                    <p class="page-subtitle" style="font-size:1.25rem;max-width:700px;margin:0 auto 2.5rem auto;color:#e0ffe0;opacity:0.92;">Step into our custom Minecraft universe where DMP2025 comes to life! Build YOUR vision of a happy, healthy Singapore and see how your ideas can shape our city's future.</p>
+                    <!-- Quick Stats -->
+                    <div class="hero-quick-stats" style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:2.5rem;">
+                        <div class="quick-stat stat-card" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border-radius:1.25rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);padding:1.5rem 2.25rem;min-width:120px;display:flex;flex-direction:column;align-items:center;">
+                            <div class="stat-icon" style="font-size:2rem;margin-bottom:0.5rem;color:#00ff87;">🏗️</div>
+                            <div class="stat-number" style="font-size:2rem;font-weight:700;color:#fff;">6</div>
+                            <div class="stat-label" style="font-size:1rem;color:#b2e5c2;">Building Zones</div>
+                        </div>
+                        <div class="quick-stat stat-card" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border-radius:1.25rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);padding:1.5rem 2.25rem;min-width:120px;display:flex;flex-direction:column;align-items:center;">
+                            <div class="stat-icon" style="font-size:2rem;margin-bottom:0.5rem;color:#00ff87;">👥</div>
+                            <div class="stat-number" style="font-size:2rem;font-weight:700;color:#fff;">100</div>
+                            <div class="stat-label" style="font-size:1rem;color:#b2e5c2;">Max Players</div>
+                        </div>
+                        <div class="quick-stat stat-card" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border-radius:1.25rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);padding:1.5rem 2.25rem;min-width:120px;display:flex;flex-direction:column;align-items:center;">
+                            <div class="stat-icon" style="font-size:2rem;margin-bottom:0.5rem;color:#00ff87;">🎯</div>
+                            <div class="stat-number" style="font-size:2rem;font-weight:700;color:#fff;">24</div>
+                            <div class="stat-label" style="font-size:1rem;color:#b2e5c2;">Online Now</div>
+                        </div>
+                        <div class="quick-stat stat-card" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border-radius:1.25rem;box-shadow:0 2px 16px rgba(0,255,135,0.08);padding:1.5rem 2.25rem;min-width:120px;display:flex;flex-direction:column;align-items:center;">
+                            <div class="stat-icon" style="font-size:2rem;margin-bottom:0.5rem;color:#00ff87;">🌟</div>
+                            <div class="stat-number" style="font-size:2rem;font-weight:700;color:#fff;">99.9%</div>
+                            <div class="stat-label" style="font-size:1rem;color:#b2e5c2;">Uptime</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Enhanced Image Banner with Parallax Effect -->
+        <div class="minecraft-mc-banner parallax-container">
+            <img src="../images/minecraft image 4.png" alt="Minecraft world" class="page-banner-image parallax-image">
+            <div class="banner-overlay">
+                <div class="banner-content">
+                    <h3>Build Your Vision of Singapore</h3>
+                    <p>Where creativity meets urban planning</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="minecraft-overview minecraft-section" style="background:linear-gradient(135deg,#1a2d13 0%,#233c22 100%);padding:4rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align:center;margin-bottom:3rem;">
+                                            <span class="section-badge" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.4rem 1.1rem;border-radius:2rem;font-weight:600;font-size:1rem;">Welcome to Mindcraft Minecraft</span>
+                    <h2 class="section-title" style="font-size:2.2rem;font-weight:700;color:#fff;margin:1rem 0 0.5rem 0;">Build Your Singapore</h2>
+                    <p class="section-subtitle" style="color:#b2e5c2;max-width:600px;margin:0 auto;">Our custom Minecraft server is designed specifically to make DMP2025 relevant to YOU. Here, you can apply everything you learn from our quest stations in a virtual 3D environment that represents Singapore's future.</p>
+                </div>
+                <div class="minecraft-content" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+                    <div class="minecraft-text">
+                        <p style="color:#e0ffe0;font-size:1.1rem;line-height:1.6;margin-bottom:1.5rem;">From designing sustainable neighborhoods to solving real-world urban challenges that affect YOUR daily life, our Minecraft world provides a safe space to experiment, collaborate, and show us what YOUR happy, healthy Singapore looks like.</p>
+                        <div class="minecraft-features-list" style="display:grid;gap:1.5rem;">
+                            <div class="feature-item minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.25rem;padding:1.5rem;box-shadow:0 4px 16px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);display:flex;align-items:center;gap:1rem;">
+                                <span class="feature-icon minecraft-icon" style="font-size:2rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🏗️</span>
+                                <div class="feature-text">
+                                    <h4 style="font-size:1.1rem;font-weight:700;color:#fff;margin:0 0 0.5rem 0;">DMP2025 Building Tools</h4>
+                                    <p style="color:#b2e5c2;margin:0;font-size:0.95rem;">Advanced building mechanics designed to help you create the Singapore you want</p>
+                                </div>
+                            </div>
+                            <div class="feature-item minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.25rem;padding:1.5rem;box-shadow:0 4px 16px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);display:flex;align-items:center;gap:1rem;">
+                                <span class="feature-icon minecraft-icon" style="font-size:2rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">👥</span>
+                                <div class="feature-text">
+                                    <h4 style="font-size:1.1rem;font-weight:700;color:#fff;margin:0 0 0.5rem 0;">Youth Collaboration</h4>
+                                    <p style="color:#b2e5c2;margin:0;font-size:0.95rem;">Work together with other young Singaporeans to build better communities</p>
+                                </div>
+                            </div>
+                            <div class="feature-item minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.25rem;padding:1.5rem;box-shadow:0 4px 16px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);display:flex;align-items:center;gap:1rem;">
+                                <span class="feature-icon minecraft-icon" style="font-size:2rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🎯</span>
+                                <div class="feature-text">
+                                    <h4 style="font-size:1.1rem;font-weight:700;color:#fff;margin:0 0 0.5rem 0;">Real-World Challenges</h4>
+                                    <p style="color:#b2e5c2;margin:0;font-size:0.95rem;">Complete missions that mirror actual DMP2025 planning scenarios</p>
+                                </div>
+                            </div>
+                            <div class="feature-item minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.25rem;padding:1.5rem;box-shadow:0 4px 16px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);display:flex;align-items:center;gap:1rem;">
+                                <span class="feature-icon minecraft-icon" style="font-size:2rem;color:#00ff87;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🏆</span>
+                                <div class="feature-text">
+                                    <h4 style="font-size:1.1rem;font-weight:700;color:#fff;margin:0 0 0.5rem 0;">Voice Your Ideas</h4>
+                                    <p style="color:#b2e5c2;margin:0;font-size:0.95rem;">Your creations and feedback directly influence DMP2025 planning</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="minecraft-visual">
+                        <div class="minecraft-showcase" style="position:relative;height:400px;display:flex;align-items:center;justify-content:center;">
+                            <div class="minecraft-scene-large" style="position:relative;width:100%;height:100%;">
+                                <div class="minecraft-block minecraft-block-float" style="position:absolute;width:40px;height:40px;background:linear-gradient(135deg,#8B4513 0%,#A0522D 100%);border-radius:4px;animation:float 3s ease-in-out infinite;"></div>
+                                <div class="minecraft-block minecraft-block-float" style="position:absolute;width:40px;height:40px;background:linear-gradient(135deg,#228B22 0%,#32CD32 100%);border-radius:4px;animation:float 3s ease-in-out infinite 0.5s;"></div>
+                                <div class="minecraft-block minecraft-block-float" style="position:absolute;width:40px;height:40px;background:linear-gradient(135deg,#4169E1 0%,#6495ED 100%);border-radius:4px;animation:float 3s ease-in-out infinite 1s;"></div>
+                                <div class="minecraft-block minecraft-block-float" style="position:absolute;width:40px;height:40px;background:linear-gradient(135deg,#FFD700 0%,#FFA500 100%);border-radius:4px;animation:float 3s ease-in-out infinite 1.5s;"></div>
+                                <div class="minecraft-block minecraft-block-float" style="position:absolute;width:40px;height:40px;background:linear-gradient(135deg,#DC143C 0%,#FF6347 100%);border-radius:4px;animation:float 3s ease-in-out infinite 2s;"></div>
+                                <div class="minecraft-block minecraft-block-float" style="position:absolute;width:40px;height:40px;background:linear-gradient(135deg,#9932CC 0%,#BA55D3 100%);border-radius:4px;animation:float 3s ease-in-out infinite 2.5s;"></div>
+                                <div class="minecraft-block minecraft-block-float" style="position:absolute;width:40px;height:40px;background:linear-gradient(135deg,#20B2AA 0%,#48D1CC 100%);border-radius:4px;animation:float 3s ease-in-out infinite 3s;"></div>
+                                <div class="minecraft-block minecraft-block-float" style="position:absolute;width:40px;height:40px;background:linear-gradient(135deg,#FF69B4 0%,#FFB6C1 100%);border-radius:4px;animation:float 3s ease-in-out infinite 3.5s;"></div>
+                                <div class="minecraft-block minecraft-block-float" style="position:absolute;width:40px;height:40px;background:linear-gradient(135deg,#F0E68C 0%,#FFFFE0 100%);border-radius:4px;animation:float 3s ease-in-out infinite 4s;"></div>
+                                <div class="minecraft-block minecraft-block-float" style="position:absolute;width:40px;height:40px;background:linear-gradient(135deg,#98FB98 0%,#90EE90 100%);border-radius:4px;animation:float 3s ease-in-out infinite 4.5s;"></div>
+                                <div class="minecraft-block minecraft-block-float" style="position:absolute;width:40px;height:40px;background:linear-gradient(135deg,#DDA0DD 0%,#E6E6FA 100%);border-radius:4px;animation:float 3s ease-in-out infinite 5s;"></div>
+                                <div class="minecraft-block minecraft-block-float" style="position:absolute;width:40px;height:40px;background:linear-gradient(135deg,#F5DEB3 0%,#DEB887 100%);border-radius:4px;animation:float 3s ease-in-out infinite 5.5s;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="world-zones minecraft-section" style="background:linear-gradient(135deg,#182a1a 0%,#233c22 100%);padding:4rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align:center;margin-bottom:3rem;">
+                    <span class="section-badge" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.4rem 1.1rem;border-radius:2rem;font-weight:600;font-size:1rem;">Explore Our Singapore Zones</span>
+                    <h2 class="section-title" style="font-size:2.2rem;font-weight:700;color:#fff;margin:1rem 0 0.5rem 0;">Build Your Singapore</h2>
+                    <p class="section-subtitle" style="color:#b2e5c2;max-width:600px;margin:0 auto;">Each zone represents different aspects of DMP2025 and challenges that affect YOUR future</p>
+                </div>
+                
+                <div class="zones-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;">
+                    <div class="zone-card minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="zone-icon minecraft-icon" style="font-size:3rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🏙️</div>
+                        <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;">Downtown District</h3>
+                        <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Design YOUR ideal city center with skyscrapers, public spaces, and transportation systems that work for young people.</p>
+                        <div class="zone-details" style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+                            <span class="zone-difficulty" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">Beginner</span>
+                            <span class="zone-players" style="background:rgba(255,255,255,0.1);color:#b2e5c2;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;">2-8 players</span>
+                        </div>
+                        <button class="btn btn-outline zone-btn btn-minecraft" style="background:rgba(0,255,135,0.1);color:#00ff87;border:1px solid rgba(0,255,135,0.3);padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;transition:all 0.3s ease;width:100%;">Enter Zone</button>
+                    </div>
+
+                    <div class="zone-card minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="zone-icon minecraft-icon" style="font-size:3rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🌱</div>
+                        <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;">Green Suburbs</h3>
+                        <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Create sustainable residential areas where YOU would want to live - with parks, community spaces, and eco-friendly housing.</p>
+                        <div class="zone-details" style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+                            <span class="zone-difficulty" style="background:rgba(255,193,7,0.15);color:#FFC107;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(255,193,7,0.2);">Intermediate</span>
+                            <span class="zone-players" style="background:rgba(255,255,255,0.1);color:#b2e5c2;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;">3-6 players</span>
+                        </div>
+                        <button class="btn btn-outline zone-btn btn-minecraft" style="background:rgba(0,255,135,0.1);color:#00ff87;border:1px solid rgba(0,255,135,0.3);padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;transition:all 0.3s ease;width:100%;">Enter Zone</button>
+                    </div>
+
+                    <div class="zone-card minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="zone-icon minecraft-icon" style="font-size:3rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🏭</div>
+                        <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;">Innovation Hub</h3>
+                        <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Plan spaces for YOUR future career - tech startups, creative industries, and learning centers that support youth development.</p>
+                        <div class="zone-details" style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+                            <span class="zone-difficulty" style="background:rgba(220,53,69,0.15);color:#DC3545;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(220,53,69,0.2);">Advanced</span>
+                            <span class="zone-players" style="background:rgba(255,255,255,0.1);color:#b2e5c2;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;">4-10 players</span>
+                        </div>
+                        <button class="btn btn-outline zone-btn btn-minecraft" style="background:rgba(0,255,135,0.1);color:#00ff87;border:1px solid rgba(0,255,135,0.3);padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;transition:all 0.3s ease;width:100%;">Enter Zone</button>
+                    </div>
+
+                    <div class="zone-card minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="zone-icon minecraft-icon" style="font-size:3rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🏖️</div>
+                        <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;">Recreation District</h3>
+                        <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Design spaces where YOU want to hang out - entertainment venues, sports facilities, and social spaces for young people.</p>
+                        <div class="zone-details" style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+                            <span class="zone-difficulty" style="background:rgba(255,193,7,0.15);color:#FFC107;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(255,193,7,0.2);">Intermediate</span>
+                            <span class="zone-players" style="background:rgba(255,255,255,0.1);color:#b2e5c2;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;">2-8 players</span>
+                        </div>
+                        <button class="btn btn-outline zone-btn btn-minecraft" style="background:rgba(0,255,135,0.1);color:#00ff87;border:1px solid rgba(0,255,135,0.3);padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;transition:all 0.3s ease;width:100%;">Enter Zone</button>
+                    </div>
+
+                    <div class="zone-card minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="zone-icon minecraft-icon" style="font-size:3rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🚇</div>
+                        <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;">Transportation Hub</h3>
+                        <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Create transportation systems that make YOUR daily life easier - efficient public transport, cycling paths, and smart mobility solutions.</p>
+                        <div class="zone-details" style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+                            <span class="zone-difficulty" style="background:rgba(220,53,69,0.15);color:#DC3545;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(220,53,69,0.2);">Advanced</span>
+                            <span class="zone-players" style="background:rgba(255,255,255,0.1);color:#b2e5c2;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;">3-8 players</span>
+                        </div>
+                        <button class="btn btn-outline zone-btn btn-minecraft" style="background:rgba(0,255,135,0.1);color:#00ff87;border:1px solid rgba(0,255,135,0.3);padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;transition:all 0.3s ease;width:100%;">Enter Zone</button>
+                    </div>
+
+                    <div class="zone-card minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="zone-icon minecraft-icon" style="font-size:3rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🎓</div>
+                        <h3 style="font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;">Learning District</h3>
+                        <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Plan educational spaces that support YOUR learning journey - schools, libraries, and skill development centers for the future.</p>
+                        <div class="zone-details" style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+                            <span class="zone-difficulty" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">Beginner</span>
+                            <span class="zone-players" style="background:rgba(255,255,255,0.1);color:#b2e5c2;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;">2-6 players</span>
+                        </div>
+                        <button class="btn btn-outline zone-btn btn-minecraft" style="background:rgba(0,255,135,0.1);color:#00ff87;border:1px solid rgba(0,255,135,0.3);padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;transition:all 0.3s ease;width:100%;">Enter Zone</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="building-tools" style="background:linear-gradient(135deg,#1a2d13 0%,#233c22 100%);padding:4rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align:center;margin-bottom:3rem;">
+                    <span class="section-badge" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.4rem 1.1rem;border-radius:2rem;font-weight:600;font-size:1rem;">Special Building Tools</span>
+                    <h2 class="section-title" style="font-size:2.2rem;font-weight:700;color:#fff;margin:1rem 0 0.5rem 0;">Advanced Tools for Urban Planning</h2>
+                    <p class="section-subtitle" style="color:#b2e5c2;max-width:600px;margin:0 auto;">Professional-grade tools designed to help you create realistic urban environments and solve complex planning challenges.</p>
+                </div>
+                <div class="tools-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;">
+                    <div class="tool-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="tool-icon" style="font-size:2.5rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">📐</div>
+                        <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:1rem;">Urban Planning Tools</h3>
+                        <ul style="list-style:none;padding:0;margin:0;">
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Zoning overlay system
+                            </li>
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Traffic flow simulation
+                            </li>
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Population density calculator
+                            </li>
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Environmental impact assessment
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tool-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="tool-icon" style="font-size:2.5rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🎨</div>
+                        <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:1rem;">Design Tools</h3>
+                        <ul style="list-style:none;padding:0;margin:0;">
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>3D building templates
+                            </li>
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Color palette system
+                            </li>
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Texture packs for different styles
+                            </li>
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Landscaping tools
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tool-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="tool-icon" style="font-size:2.5rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">📊</div>
+                        <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:1rem;">Analytics Tools</h3>
+                        <ul style="list-style:none;padding:0;margin:0;">
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Real-time statistics
+                            </li>
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Efficiency metrics
+                            </li>
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Sustainability scoring
+                            </li>
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Community satisfaction tracker
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tool-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="tool-icon" style="font-size:2.5rem;color:#00ff87;margin-bottom:1rem;filter:drop-shadow(0 2px 8px rgba(0,255,135,0.3));">🤝</div>
+                        <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:1rem;">Collaboration Tools</h3>
+                        <ul style="list-style:none;padding:0;margin:0;">
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Team chat system
+                            </li>
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Shared building permissions
+                            </li>
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Project management interface
+                            </li>
+                            <li style="color:#b2e5c2;margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+                                <span style="color:#00ff87;margin-right:0.5rem;">•</span>Version control for designs
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenges" style="background:linear-gradient(135deg,#182a1a 0%,#233c22 100%);padding:4rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align:center;margin-bottom:3rem;">
+                    <span class="section-badge" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.4rem 1.1rem;border-radius:2rem;font-weight:600;font-size:1rem;">Weekly Challenges</span>
+                    <h2 class="section-title" style="font-size:2.2rem;font-weight:700;color:#fff;margin:1rem 0 0.5rem 0;">Test Your Skills</h2>
+                    <p class="section-subtitle" style="color:#b2e5c2;max-width:600px;margin:0 auto;">Complete weekly challenges to earn rewards and showcase your urban planning expertise.</p>
+                </div>
+                <div class="challenges-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;">
+                    <div class="challenge-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="challenge-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                            <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin:0;">🏆 Sustainable City Challenge</h3>
+                            <span class="challenge-duration" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">7 days</span>
+                        </div>
+                        <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Design a city that runs entirely on renewable energy with zero carbon emissions.</p>
+                        <div class="challenge-rewards" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+                            <span class="reward-item" style="background:rgba(255,193,7,0.15);color:#FFC107;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(255,193,7,0.2);">🏅 Gold Badge</span>
+                            <span class="reward-item" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">💰 500 Points</span>
+                            <span class="reward-item" style="background:rgba(255,255,255,0.1);color:#b2e5c2;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">🎁 Special Items</span>
+                        </div>
+                        <button class="btn btn-primary challenge-btn" style="background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:none;transition:all 0.3s ease;width:100%;">Join Challenge</button>
+                    </div>
+
+                    <div class="challenge-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="challenge-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                            <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin:0;">🏆 Community Hub Challenge</h3>
+                            <span class="challenge-duration" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">5 days</span>
+                        </div>
+                        <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Create a community center that serves people of all ages and backgrounds.</p>
+                        <div class="challenge-rewards" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+                            <span class="reward-item" style="background:rgba(192,192,192,0.15);color:#C0C0C0;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(192,192,192,0.2);">🏅 Silver Badge</span>
+                            <span class="reward-item" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">💰 300 Points</span>
+                            <span class="reward-item" style="background:rgba(255,255,255,0.1);color:#b2e5c2;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">🎁 Special Items</span>
+                        </div>
+                        <button class="btn btn-primary challenge-btn" style="background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:none;transition:all 0.3s ease;width:100%;">Join Challenge</button>
+                    </div>
+
+                    <div class="challenge-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.5rem;padding:2rem;box-shadow:0 4px 24px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);transition:all 0.3s ease;">
+                        <div class="challenge-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                            <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin:0;">🏆 Smart Transportation Challenge</h3>
+                            <span class="challenge-duration" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.9rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">10 days</span>
+                        </div>
+                        <p style="color:#e0ffe0;line-height:1.6;margin-bottom:1.5rem;">Design an integrated transportation system that reduces traffic and pollution.</p>
+                        <div class="challenge-rewards" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+                            <span class="reward-item" style="background:rgba(229,228,226,0.15);color:#E5E4E2;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(229,228,226,0.2);">🏅 Platinum Badge</span>
+                            <span class="reward-item" style="background:rgba(0,255,135,0.15);color:#00ff87;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;border:1px solid rgba(0,255,135,0.2);">💰 750 Points</span>
+                            <span class="reward-item" style="background:rgba(255,255,255,0.1);color:#b2e5c2;padding:0.3rem 0.8rem;border-radius:1rem;font-size:0.85rem;font-weight:600;">🎁 Special Items</span>
+                        </div>
+                        <button class="btn btn-primary challenge-btn" style="background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;padding:0.75rem 1.5rem;border-radius:1rem;font-weight:600;border:none;transition:all 0.3s ease;width:100%;">Join Challenge</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="server-info minecraft-section" style="background:linear-gradient(135deg,#1a2d13 0%,#233c22 100%);padding:4rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align:center;margin-bottom:3rem;">
+                    <span class="section-badge" style="background:rgba(0,255,135,0.12);color:#00ff87;padding:0.4rem 1.1rem;border-radius:2rem;font-weight:600;font-size:1rem;">Server Information</span>
+                    <h2 class="section-title" style="font-size:2.2rem;font-weight:700;color:#fff;margin:1rem 0 0.5rem 0;">Connect to Our World</h2>
+                    <p class="section-subtitle" style="color:#b2e5c2;max-width:600px;margin:0 auto;">Real-time server status and connection information for the Mindcraft Minecraft world.</p>
+                </div>
+                <div class="server-content" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+                    <div class="server-details">
+                        <div class="server-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-bottom:2rem;">
+                            <div class="stat-item minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.25rem;padding:1.5rem;box-shadow:0 4px 16px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);display:flex;justify-content:space-between;align-items:center;">
+                                <span class="stat-label" style="color:#b2e5c2;font-weight:600;">Server Status:</span>
+                                <span class="stat-value online" style="color:#00ff87;font-weight:700;">🟢 Online</span>
+                            </div>
+                            <div class="stat-item minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.25rem;padding:1.5rem;box-shadow:0 4px 16px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);display:flex;justify-content:space-between;align-items:center;">
+                                <span class="stat-label" style="color:#b2e5c2;font-weight:600;">Players Online:</span>
+                                <span class="stat-value" style="color:#fff;font-weight:700;">24/100</span>
+                            </div>
+                            <div class="stat-item minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.25rem;padding:1.5rem;box-shadow:0 4px 16px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);display:flex;justify-content:space-between;align-items:center;">
+                                <span class="stat-label" style="color:#b2e5c2;font-weight:600;">World Size:</span>
+                                <span class="stat-value" style="color:#fff;font-weight:700;">10,000 x 10,000</span>
+                            </div>
+                            <div class="stat-item minecraft-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.05) 100%);border-radius:1.25rem;padding:1.5rem;box-shadow:0 4px 16px rgba(0,255,135,0.12);border:1px solid rgba(0,255,135,0.1);display:flex;justify-content:space-between;align-items:center;">
+                                <span class="stat-label" style="color:#b2e5c2;font-weight:600;">Uptime:</span>
+                                <span class="stat-value" style="color:#fff;font-weight:700;">99.9%</span>
+                            </div>
+                        </div>
+                        <div class="server-actions" style="display:flex;gap:1rem;flex-wrap:wrap;">
+                            <button class="btn btn-primary btn-minecraft" style="background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;padding:1rem 2rem;border-radius:1rem;font-weight:600;border:none;transition:all 0.3s ease;box-shadow:0 4px 16px rgba(0,255,135,0.3);">Connect to Server</button>
+                            <button class="btn btn-secondary btn-minecraft" style="background:rgba(255,255,255,0.1);color:#fff;padding:1rem 2rem;border-radius:1rem;font-weight:600;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;">View Server Rules</button>
+                        </div>
+                    </div>
+                    <div class="server-visual">
+                        <div class="minecraft-world-preview" style="position:relative;height:300px;display:flex;align-items:center;justify-content:center;">
+                            <div class="minecraft-world-container" style="position:relative;width:100%;height:100%;perspective:1000px;">
+                                <div class="minecraft-world-block" style="position:absolute;width:30px;height:30px;background:linear-gradient(135deg,#8B4513 0%,#A0522D 100%);border-radius:4px;transform: translateZ(0px) translateX(0px) translateY(0px);animation:float 4s ease-in-out infinite;"></div>
+                                <div class="minecraft-world-block" style="position:absolute;width:30px;height:30px;background:linear-gradient(135deg,#228B22 0%,#32CD32 100%);border-radius:4px;transform: translateZ(30px) translateX(30px) translateY(-30px);animation:float 4s ease-in-out infinite 0.5s;"></div>
+                                <div class="minecraft-world-block" style="position:absolute;width:30px;height:30px;background:linear-gradient(135deg,#4169E1 0%,#6495ED 100%);border-radius:4px;transform: translateZ(60px) translateX(60px) translateY(-60px);animation:float 4s ease-in-out infinite 1s;"></div>
+                                <div class="minecraft-world-block" style="position:absolute;width:30px;height:30px;background:linear-gradient(135deg,#FFD700 0%,#FFA500 100%);border-radius:4px;transform: translateZ(90px) translateX(90px) translateY(-90px);animation:float 4s ease-in-out infinite 1.5s;"></div>
+                                <div class="minecraft-world-block" style="position:absolute;width:30px;height:30px;background:linear-gradient(135deg,#DC143C 0%,#FF6347 100%);border-radius:4px;transform: translateZ(120px) translateX(120px) translateY(-120px);animation:float 4s ease-in-out infinite 2s;"></div>
+                                <div class="minecraft-world-block" style="position:absolute;width:30px;height:30px;background:linear-gradient(135deg,#9932CC 0%,#BA55D3 100%);border-radius:4px;transform: translateZ(150px) translateX(150px) translateY(-150px);animation:float 4s ease-in-out infinite 2.5s;"></div>
+                                <div class="minecraft-world-block" style="position:absolute;width:30px;height:30px;background:linear-gradient(135deg,#20B2AA 0%,#48D1CC 100%);border-radius:4px;transform: translateZ(180px) translateX(180px) translateY(-180px);animation:float 4s ease-in-out infinite 3s;"></div>
+                                <div class="minecraft-world-block" style="position:absolute;width:30px;height:30px;background:linear-gradient(135deg,#FF69B4 0%,#FFB6C1 100%);border-radius:4px;transform: translateZ(210px) translateX(210px) translateY(-210px);animation:float 4s ease-in-out infinite 3.5s;"></div>
+                                <div class="minecraft-world-block" style="position:absolute;width:30px;height:30px;background:linear-gradient(135deg,#F0E68C 0%,#FFFFE0 100%);border-radius:4px;transform: translateZ(240px) translateX(240px) translateY(-240px);animation:float 4s ease-in-out infinite 4s;"></div>
+                                <div class="minecraft-world-block" style="position:absolute;width:30px;height:30px;background:linear-gradient(135deg,#98FB98 0%,#90EE90 100%);border-radius:4px;transform: translateZ(270px) translateX(270px) translateY(-270px);animation:float 4s ease-in-out infinite 4.5s;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced CTA Section -->
+        <section class="cta-section minecraft-section enhanced-cta" style="background:linear-gradient(135deg,#1a2d13 0%,#233c22 100%);padding:4rem 0;">
+            <div class="cta-particles"></div>
+            <div class="container">
+                <div class="cta-content" style="text-align:center;max-width:800px;margin:0 auto;">
+                    <div class="cta-icon floating" style="font-size:3rem;margin-bottom:1.5rem;filter:drop-shadow(0 4px 16px rgba(0,255,135,0.3));">⛏️</div>
+                    <h2 style="font-size:2.5rem;font-weight:700;color:#fff;margin-bottom:1rem;text-shadow:0 2px 8px rgba(0,0,0,0.2);">Ready to Build Your City?</h2>
+                    <p style="color:#e0ffe0;font-size:1.2rem;margin-bottom:2.5rem;line-height:1.6;opacity:0.92;">Join our Minecraft community and start creating the cities of tomorrow today!</p>
+                    
+                    <div class="cta-buttons" style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+                        <a href="quest-stations.html" class="btn btn-primary" style="background:linear-gradient(135deg,#00ff87 0%,#3e8138 100%);color:#fff;padding:1rem 2.5rem;border-radius:2rem;text-decoration:none;font-weight:600;font-size:1.1rem;box-shadow:0 4px 16px rgba(0,255,135,0.3);transition:all 0.3s ease;display:flex;align-items:center;gap:0.5rem;">
+                            <span class="btn-icon" style="font-size:1.2rem;">🎯</span>
+                            <span class="btn-text">Complete Quest Stations First</span>
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary" style="background:rgba(255,255,255,0.1);color:#fff;padding:1rem 2.5rem;border-radius:2rem;text-decoration:none;font-weight:600;font-size:1.1rem;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s ease;display:flex;align-items:center;gap:0.5rem;">
+                            <span class="btn-icon" style="font-size:1.2rem;">💬</span>
+                            <span class="btn-text">Get Server Access</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer minecraft-footer enhanced-footer" style="background:linear-gradient(135deg,#0f1a0f 0%,#1a2d13 100%);padding:3rem 0 1rem 0;border-top:1px solid rgba(0,255,135,0.1);">
+        <div class="container">
+            <div class="footer-content" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:3rem;margin-bottom:2rem;">
+                <div class="footer-section">
+                    <h3 style="font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:1rem;">Mindcraft</h3>
+                    <p style="color:#b2e5c2;line-height:1.6;margin-bottom:1.5rem;">Building better cities through interactive learning and community engagement.</p>
+                    <div class="social-links" style="display:flex;gap:1rem;">
+                        <a href="#" class="social-link" style="display:flex;align-items:center;gap:0.5rem;color:#00ff87;text-decoration:none;padding:0.5rem 1rem;background:rgba(0,255,135,0.1);border-radius:1rem;transition:all 0.3s ease;">
+                            <span class="social-icon" style="font-size:1.2rem;">📘</span>
+                            <span class="social-label" style="font-size:0.9rem;font-weight:600;">Facebook</span>
+                        </a>
+                        <a href="#" class="social-link" style="display:flex;align-items:center;gap:0.5rem;color:#00ff87;text-decoration:none;padding:0.5rem 1rem;background:rgba(0,255,135,0.1);border-radius:1rem;transition:all 0.3s ease;">
+                            <span class="social-icon" style="font-size:1.2rem;">📷</span>
+                            <span class="social-label" style="font-size:0.9rem;font-weight:600;">Instagram</span>
+                        </a>
+                        <a href="#" class="social-link" style="display:flex;align-items:center;gap:0.5rem;color:#00ff87;text-decoration:none;padding:0.5rem 1rem;background:rgba(0,255,135,0.1);border-radius:1rem;transition:all 0.3s ease;">
+                            <span class="social-icon" style="font-size:1.2rem;">🐦</span>
+                            <span class="social-label" style="font-size:0.9rem;font-weight:600;">Twitter</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:1rem;">Quick Links</h4>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        <li style="margin-bottom:0.5rem;"><a href="about.html" style="color:#b2e5c2;text-decoration:none;transition:color 0.3s ease;">About Us</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="quest-stations.html" style="color:#b2e5c2;text-decoration:none;transition:color 0.3s ease;">Quest Stations</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="minecraft.html" style="color:#b2e5c2;text-decoration:none;transition:color 0.3s ease;">Minecraft World</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="rewards.html" style="color:#b2e5c2;text-decoration:none;transition:color 0.3s ease;">Rewards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:1rem;">Partners</h4>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        <li style="margin-bottom:0.5rem;color:#b2e5c2;">URA</li>
+                        <li style="margin-bottom:0.5rem;color:#b2e5c2;">ActiveSG</li>
+                        <li style="margin-bottom:0.5rem;color:#b2e5c2;">People's Association</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:1rem;">Contact</h4>
+                    <div style="color:#b2e5c2;line-height:1.8;">
+                        <p style="margin-bottom:0.5rem;">📧 info@urbanquest.sg</p>
+                        <p style="margin-bottom:0.5rem;">📞 +65 1234 5678</p>
+                        <p style="margin-bottom:0.5rem;">📍 Singapore</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+                <p style="color:#b2e5c2;margin:0;font-size:0.9rem;">&copy; 2024 Mindcraft. All rights reserved.</p>
+                <div class="footer-links" style="display:flex;gap:1.5rem;">
+                    <a href="#" style="color:#b2e5c2;text-decoration:none;font-size:0.9rem;transition:color 0.3s ease;">Privacy Policy</a>
+                    <a href="#" style="color:#b2e5c2;text-decoration:none;font-size:0.9rem;transition:color 0.3s ease;">Terms of Service</a>
+                    <a href="#" style="color:#b2e5c2;text-decoration:none;font-size:0.9rem;transition:color 0.3s ease;">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/minecraft.js"></script>
+    <script src="../scripts/advanced-chatbot.js"></script>
+</body>
+</html> 

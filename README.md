@@ -1,4 +1,4 @@
-# Urban Quest - Interactive Urban Planning Website
+# Mindcraft- Interactive Urban Planning Website
 
 A modern, multi-page website that combines urban planning education with interactive gaming elements, featuring Minecraft integration, advanced chatbot, and community engagement. **Now with enhanced professional design and improved user experience!**
 

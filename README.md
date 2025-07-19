@@ -287,4 +287,10 @@ For questions or support:
 - **JavaScript Libraries**: Vanilla JS, with inspiration from open-source UI and animation projects.
 - **Accessibility**: WCAG guidelines and [WebAIM](https://webaim.org/) resources.
 - **Professional Design**: Enhanced with modern glassmorphism effects, improved typography, and professional color schemes.
-- **Other Attributions**: See individual files for further attributions where required. 
+- **Other Attributions**: See individual files for further attributions where required.
+
+### **Additional Image Sources**
+- **Microsoft UK Stories**: Xbox announces new PUBG and Minecraft bundles. Microsoft UK Stories. (2023, November 14). https://ukstories.microsoft.com/features/xbox-announces-new-pubg-and-minecraft-bundles/
+- **Reddit Community**: u/[username]. (2024, March 29). This digital city has been worked on for over 13 years [Online forum post]. Reddit. https://www.reddit.com/r/Damnthatsinteresting/comments/1brhc59/this_digital_city_has_been_worked_on_for_over_13/
+- **Tumblr**: Dream regression [Blog post]. Tumblr. https://www.tumblr.com/dreamregression
+- **AlphaCoders**: Wallpaper ID: 1148753 - Minecraft digital art [Image]. AlphaCoders. https://wall.alphacoders.com/big.php?i=1148753

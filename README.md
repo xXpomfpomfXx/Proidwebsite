@@ -1,4 +1,4 @@
-# Urban Quest - Interactive Urban Planning Website
+# Mindcraft- Interactive Urban Planning Website
 
 A modern, multi-page website that combines urban planning education with interactive gaming elements, featuring Minecraft integration, advanced chatbot, and community engagement. **Now with enhanced professional design and improved user experience!**
 
@@ -294,3 +294,4 @@ For questions or support:
 - **Reddit Community**: u/[username]. (2024, March 29). This digital city has been worked on for over 13 years [Online forum post]. Reddit. https://www.reddit.com/r/Damnthatsinteresting/comments/1brhc59/this_digital_city_has_been_worked_on_for_over_13/
 - **Tumblr**: Dream regression [Blog post]. Tumblr. https://www.tumblr.com/dreamregression
 - **AlphaCoders**: Wallpaper ID: 1148753 - Minecraft digital art [Image]. AlphaCoders. https://wall.alphacoders.com/big.php?i=1148753
+
